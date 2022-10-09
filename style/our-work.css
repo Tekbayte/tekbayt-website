@@ -1,0 +1,469 @@
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+/* Navbar Section */
+#header{
+    position: fixed;
+    width: 100vw;
+    background: #ffff;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0,0,0,0.2);
+}
+
+#navbar{
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img{
+    width: 4rem;
+}
+
+#hamburger-menu{
+    font-size: 3rem;
+    cursor: pointer;
+    margin-right: 2rem;
+    opacity: 0.6;
+}
+
+#hamburger-menu:hover{
+    opacity: 1;
+}
+
+/* Mobile Navbar */
+.navbar-mobile{
+    position: absolute;
+    transform: translateY(-100vh);
+    transition: transform 1s ease-in-out;
+    background: #ffffff;
+    width: 100vw;
+    box-shadow: 0 0.2rem 0.4rem 0 rgba(0,0,0,.2);
+    z-index: -30;
+}
+
+.navbar-mobile .nav-item{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0rem 2rem;
+}
+
+.navbar-mobile .nav-item a{
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    color: #000;
+    text-transform: uppercase;
+    width: 100%
+}
+
+.navbar-mobile .nav-item a:hover{
+    color: #3180D1;
+}
+
+.navbar-mobile .contact-us{
+    display: block;
+    text-align: center;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    color: #ffffff;
+    width: 90%;
+    background: #3180D1;
+    margin: 0 0rem 2rem 2rem;
+    border-radius: 0.4rem;
+    transition: background 0.3s ease-in-out;
+}
+
+.navbar-mobile .contact-us:hover{
+    background: #f66733;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Desktop Navbar */
+.navbar-desktop .nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 2rem;
+}
+
+.navbar-desktop .nav-item a{
+    padding: 0 1rem;
+    text-transform: uppercase;
+    color: #000;
+    font-size: 1.3rem;
+}
+
+.navbar-desktop .nav-item a:hover{
+    color: #3180D1;
+}
+
+.navbar-desktop .nav-item a:last-child{
+    padding: 1rem 1.5rem;
+    background: #3180D1;
+    color: #ffffff;
+    border-radius: 0.3rem;
+    transition: background 0.2s ease-in-out;
+}
+
+.navbar-desktop .nav-item a:last-child:hover{
+    background: #f66733;
+    transition: background 0.2s ease-in-out;
+}
+
+.navbar-desktop .vertical-line{
+    border-right: 0.2rem solid rgb(144, 144, 144);
+    width: 0.2rem;
+    height: 4.5rem;
+    margin: 0 3rem;
+}
+
+
+/* Our Works Section */
+#our-works{
+    margin: 10rem 2rem;
+    transition: margin 1s ease-in-out;
+}
+
+
+#our-works h2{
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+#our-works h2 .our-work-team{
+    color: #f66733
+}
+
+#our-works .work-container{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 5rem 3rem;
+}
+
+#our-works .work-container .work-content{
+    border-radius: 0.8rem;
+    position: relative;
+}
+
+#our-works .work-container .work-content img{
+    width: 100%;
+    object-fit: contain;
+    transition: all 1s ease-in-out;
+}
+
+#our-works .work-container .work-content:hover img, #our-works .work-container .work-content:hover .overlay-text{
+    scale: 0.95;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#our-works .work-container .work-content .overlay-text{
+    position: absolute;
+    background: #D9D9D9;
+    opacity: 0.8;
+    width: 100%;
+    padding: 3.5rem 0;
+    bottom: 0.3rem;
+    left: 0;
+    border-radius: 0 0 0.8rem 0.8rem;
+    transition: all 0.5s ease-in-out;
+}
+
+#our-works .work-container .work-content .our-work-text{
+    position: absolute;
+    padding-left: 2rem;
+    bottom: 2.7rem;
+    left: 0;
+    width: 100%;
+}
+
+#our-works .work-container .work-content .our-work-text p:first-child{
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+#our-works .work-container .work-content .our-work-text p:not(first-child){
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: -0.8rem;
+}
+
+#our-works .work-container .work-content .our-work-link a{
+    position: absolute;
+    text-decoration: underline;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 400;
+    bottom: -2.3rem;
+}
+
+#our-works .work-container .work-content .our-work-link a:hover {
+    color: #3a27ba;
+    transition: color 0.3s ease-in-out;
+}
+
+
+/* Contact Us Section */
+#contact-us{
+    margin: 10rem 2rem;
+    transition: margin 1s ease-in-out;
+}
+
+#contact-us .contact-us-img{
+    width: 35rem;
+    object-fit: contain;
+}
+
+#contact-us .contact-us-container{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 3rem;
+}
+
+#contact-us .contact-us-content{
+    text-align: center;
+}
+
+.contact-us-content h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+.contact-us-content .contact-us-business{
+    color: #f66733;
+}
+
+.contact-us-content p{
+    font-size: 1.6rem;
+}
+
+.contact-us-form{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 2rem;
+}
+
+.contact-us-form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-form div label{
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.contact-us-form div input, .contact-us-form div select, .contact-us-form div textarea{
+    padding: 1.3rem 1rem;
+    border-radius: 0.3rem;
+    border: 0.15rem solid #3180D1;
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+}
+
+.contact-us-form div select option{
+    font-size: 1.6rem;
+}
+
+.contact-us-form .submit-button{
+    padding: 1.5rem 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background: #f66733;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 0.4s ease-in-out;
+}
+
+.contact-us-form .submit-button:hover{
+    background: #3180D1;
+    transition: background 0.4s ease-in-out;
+}
+
+
+/* Footer Section */
+#footer{
+    background: #3180D1;
+    padding: 4rem 3rem;
+}
+
+#footer .footer-container{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 3rem;
+}
+
+#footer .footer-logo{
+    width: 18rem;
+}
+
+#footer .social-menu{
+    display: flex;
+    align-items: center;
+}
+
+#footer .social-menu a{
+    font-size: 1rem;
+    color: #fff;
+    margin: 2rem 1.5rem;
+}
+
+#footer .social-menu a:hover{
+    color: #000;
+}
+
+#footer .social-menu a i{
+    font-size: 2rem;
+}
+
+#footer .footer-services h2, #footer .footer-company h2{
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+}
+
+#footer .footer-services div, #footer .footer-company div{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+#footer .footer-services div a, #footer .footer-company div a{
+    color: #dcdcdc;
+    padding: 0.7rem 0;
+    font-size: 1.4rem;
+}
+
+#footer .footer-services div a:hover, #footer .footer-company div a:hover{
+    color: #fff;
+    font-size: 1.5rem;
+}
+#footer .copyright-info{
+    margin: 5rem 0;
+    border-top: 0.15rem solid #dcdcdc;
+}
+
+#footer .copyright-info p{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* hide desktop navbar */
+    #navbar .navbar-desktop{
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* hide desktop navbar */
+    #navbar .navbar-desktop{
+        display: none;
+    }
+
+    #our-works h2{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    #our-works .work-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #our-works .work-container .work-content .overlay-text{
+        padding: 3.5rem 0;
+    }
+
+    /* Footer Section */
+    #footer .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* display navlinks on desktop devices */
+    #navbar .navbar-desktop{
+        display: block;
+    }
+
+    #hamburger-menu, .navbar-mobile{
+        display: none;
+    }
+
+    /* Our Works Section */
+    #our-works h2{
+        font-size: 3rem;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    /* COntact Us Section */
+    #contact-us .contact-us-img{
+        width: 40rem;
+    }
+
+    #contact-us .contact-us-container{
+        grid-template-columns: 1fr 1fr;
+        place-content: center;
+    }
+
+    #contact-us .contact-us-content{
+        text-align: start;
+    }
+
+    #contact-us .contact-us-content h2{
+        font-size: 4rem;
+    }
+
+    #contact-us .contact-us-content p{
+        font-size: 1.7rem;
+    }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    #our-works h2{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    #our-works .work-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #our-works .work-container .work-content .overlay-text{
+        padding: 4rem 0;
+    }
+}
