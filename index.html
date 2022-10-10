@@ -11,6 +11,47 @@
 </head>
 <body>
    <div class="wrapper">
+    <!-- Header Goes Here -->
+    <header id="header">
+        <div id="navbar">
+            <!-- Navbar Logo -->
+            <div id="logo">
+                <a href="/our-work.html">
+                    <img src="./Assets/LogoNav.png" alt="Tekbayt Logo">
+                </a>
+            </div>
+
+            <!-- Navbar Desktop Version -->
+            <div class="navbar-desktop">
+                <nav>
+                    <ul class="nav-item">
+                        <a href="#">Home</a>
+                        <a href="#">Services</a>
+                        <a href="./our-work.html">Our Work</a>
+                        <a href="#">About Us</a>
+                        <div class="vertical-line"></div>
+                        <a href="./contact-us.html">Contact Us</a>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- Hamburger Menu -->
+            <div id="hamburger-menu">
+                <i class="bi bi-list" id="menu-icon"></i>
+            </div>
+        </div>
+
+        <!-- Navbar on Mobile Devics -->
+        <nav class="navbar-mobile">
+            <ul class="nav-item">
+                <a href="#">Home</a>
+                <a href="#">Services</a>
+                <a href="./our-work.html">Our Work</a>
+                <a href="#">About Us</a>
+            </ul>
+            <a href="./contact-us.html" class="contact-us">Contact Us</a>
+        </nav>
+    </header>
     <section class="intro">
         <div class="divspeed">
           
@@ -151,7 +192,56 @@ through the best digital services</p>
         </div>
     </div>
 </div>
-</div>
 
+    <!-- Footer starts here -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-logo-socials">
+                <img src="./Assets/LogoFooter.png" alt="footer logo" class="footer-logo">
+                <div class="social-menu">
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-twitter"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-envelope-fill"></i>
+                    </a>
+                </div>
+            </div>
+    
+            <div class="footer-services">
+                <h2>Services</h2>
+                <div>
+                    <a href="#">Web Design</a>
+                    <a href="#">Mobile Development</a>
+                    <a href="#">UI/UX Design</a>
+                    <a href="#">Web Development</a>
+                    <a href="#">Graphics Design</a>
+                    <a href="#">Brand Management</a>
+                </div>
+            </div>
+    
+            <div class="footer-company">
+                <h2>Company</h2>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright-info">
+            <p>&copy; <span id="date"></span> Tekbayt. All Rights Reserved</p>
+        </div>
+    </footer>
+
+   
+</div>
+ <script src="./script/our-work.js"></script>
 </body>
 </html>
