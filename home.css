@@ -8,6 +8,9 @@ font-size: 62.5%;
 overflow-x: hidden;
 scroll-behavior: smooth;
 }
+a{
+    text-decoration: none;
+}
 /* Navbar Section */
 #header{
     position: fixed;
@@ -103,7 +106,7 @@ scroll-behavior: smooth;
     text-transform: uppercase;
     color: #000;
     font-size: 1.3rem;
-    text-decoration: none;
+   
 }
 
 .navbar-desktop .nav-item a:hover{
@@ -627,88 +630,124 @@ border: none;
     font-size: 1.5rem;
     justify-content: center;
 }
-/*
-this is desktop
-.wrapperGrid{
+
+
+
+
+
+/* Footer Section */
+#footer{
+    background: #3180D1;
+    padding: 4rem 3rem;
+}
+
+#footer .footer-container{
     display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
-gap: 3rem;
-}
-.whyWork{
-    font-size: 1.6rem;
-
-line-height: 2.4rem;
-align-items: center;
-text-align: center;
-padding: .1rem;
-width: 100%;
+    grid-template-columns: repeat(1fr);
+    gap: 3rem;
 }
 
-.reason{
-    position: relative;
-    width: 100%;
+#footer .footer-logo{
+    width: 18rem;
+}
+
+#footer .social-menu{
+    display: flex;
+    align-items: center;
+}
+
+#footer .social-menu a{
+    font-size: 1rem;
+    color: #fff;
+    margin: 2rem 1.5rem;
+}
+
+#footer .social-menu a:hover{
+    color: #000;
+}
+
+#footer .social-menu a i{
+    font-size: 2rem;
+}
+
+#footer .footer-services h2, #footer .footer-company h2{
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+}
+
+#footer .footer-services div, #footer .footer-company div{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  
-   text-align: center;
-
-background-color: white;
-
-
+    align-items: start;
 }
-.reason1{
-    gap:2rem;
+
+#footer .footer-services div a, #footer .footer-company div a{
+    color: #dcdcdc;
+    padding: 0.7rem 0;
+    font-size: 1.4rem;
 }
-h3.result{
-    font-size: 1.6rem;
-line-height: 2.4rem;
-} */
+
+#footer .footer-services div a:hover, #footer .footer-company div a:hover{
+    color: #fff;
+    font-size: 1.5rem;
+}
+#footer .copyright-info{
+    margin: 5rem 0;
+    border-top: 0.15rem solid #dcdcdc;
+}
+
+#footer .copyright-info p{
+    font-size: 1.5rem;
+    text-align: center;
+    color: #fff;
+}
+
+/* Media Queries */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /* hide desktop navbar */
+    #navbar .navbar-desktop{
+        display: none;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    /* hide desktop navbar */
+    #navbar .navbar-desktop{
+        display: none;
+    }
+
+    #our-works h2{
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    #our-works .work-container{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #our-works .work-container .work-content .overlay-text{
+        padding: 3.5rem 0;
+    }
+
+    /* Footer Section */
+    #footer .footer-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
 
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    /* display navlinks on desktop devices */
+    #navbar .navbar-desktop{
+        display: block;
+    }
 
-
-/* 
-position: absolute;
-width: 363px;
-height: 337px;
-left: -24px;
-top: 0px;
-
-/* White 100 
-
-background: #FFFFFF;
-border-radius: 10px; */
-
-
-
-
-
-/* position: absolute;
-width: 75px;
-height: 30px;
-left: 113px;
-top: 193px;
-
-
-
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 600;
-font-size: 20px;
-line-height: 30px;
-
-color: #000000; */
-
-
-
-
-
-/* //styleName: Body for Desktop/Regular;
-font-family: Poppins;
-font-size: 16px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: center; */
+    #hamburger-menu, .navbar-mobile{
+        display: none;
+    }
