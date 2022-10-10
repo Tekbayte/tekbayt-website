@@ -3,14 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-html{font-family: 'Poppins', sans-serif; 
-font-size: 62.5%;
-overflow-x: hidden;
-scroll-behavior: smooth;
-}
+
+html{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    }
 a{
     text-decoration: none;
 }
+
 /* Navbar Section */
 #header{
     position: fixed;
@@ -133,16 +136,14 @@ a{
     margin: 0 3rem;
 }
 
-
 h3.speed {
-    
     text-align: center;
-font-size: 3rem;
-font-weight: 600;
-margin: 9rem auto 0;
-line-height: 4.6rem;
-top:0;
-left: 0;
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 9rem auto 0;
+    line-height: 4.6rem;
+    top:0;
+    left: 0;
 /* width: 99%; */
 }
 
