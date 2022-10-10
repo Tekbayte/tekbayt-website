@@ -1,0 +1,585 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{font-family: 'Poppins', sans-serif; 
+font-size: 62.5%;
+overflow-x: hidden;
+scroll-behavior: smooth;
+}
+h3.speed {
+    
+    text-align: center;
+font-size: 3rem;
+font-weight: 600;
+margin: 2rem auto 0;
+line-height: 4.6rem;
+top:0;
+left: 0;
+/* width: 99%; */
+}
+
+ .divspeed{
+ margin: 0 auto;
+} 
+h3.speed::before{
+    content: url(/Assets/VectorIncrease.png);
+    position: absolute;
+    width: 100%;
+
+    display: flex;
+justify-content: center;
+
+    top: 5.8rem;
+    right: 7.5rem;
+}
+
+.we {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    text-align: center;
+   padding: 0 3rem;
+    width: 99%;
+    /* Black 80 */
+    
+    color: #464746;
+}
+button.project{
+   
+    display: block;
+    margin: 0 auto;
+}
+.firstImg{
+    margin: 0 auto;
+
+    
+}
+.downloader2div{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+img.downloader2{
+    margin: 0 auto;
+    width: 99%;
+    padding: 0 1rem;
+    
+}
+
+.rectanglediv{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* align-self: start; */
+    top: -9.2rem;
+    z-index: 1;
+    left: -12rem;
+}
+@media only screen and (min-width: 768px) {
+    .intro{
+        display: flex;
+        margin: 0;
+        position: relative;
+        justify-content:space-around;
+        padding: 3rem;
+    }
+    .we{
+        padding: 0;
+        text-align: left;
+        width: 100%;
+    }
+    .speed{
+        position: relative;
+        margin: 0;
+    }
+    .divspeed{
+        position: relative;
+        margin: 0;
+        text-align: left;
+    }
+    h3.speed{
+        text-align: left;
+    }
+    h3.speed::before{
+        content: url(/Assets/VectorIncrease.png);
+        position: absolute;
+        width: 100%;
+    
+        display: flex;
+    justify-content: center;
+    
+        top: 3.8rem;
+        right: 105px;
+    }
+   
+}
+@media only screen and (min-width: 1024px) {
+    .intro{
+        display: flex;
+        margin: 0;
+        position: relative;
+        justify-content:space-around;
+        padding: 3rem;
+    }
+    .we{
+        padding: 0;
+        text-align: left;
+        width: 100%;
+    }
+    .speed{
+        position: relative;
+        margin: 0;
+    }
+    .divspeed{
+        position: relative;
+        margin: 0;
+        text-align: left;
+    }
+    h3.speed{
+        text-align: left;
+    }
+    h3.speed::before{
+        content: url(/Assets/VectorIncrease.png);
+        position: absolute;
+        width: 100%;
+    
+        display: flex;
+    justify-content: center;
+    
+        top: 3.8rem;
+        right: 115px;
+    }
+   
+}
+button.project{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+padding: 1rem 5.2rem;
+color: white;
+width: 20.3rem;
+font-size: 1.2rem;
+height: 4.1rem;
+margin: 2.5rem auto;
+background: #3180D1;
+border-radius: .5rem;
+align-items: center;
+border: none;
+}
+.our{
+    margin-top: 1.2rem;
+}
+@media only screen and (min-width: 768px) {
+    button.project{
+        margin: 2.5rem 0;
+       }
+       .firstImg{
+        margin: 0;
+       }
+    }
+.whyWorkWithUsWrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border: none;
+    padding: 1rem;
+    margin: 3rem auto;
+    width: 100%;
+    
+    bottom: 6rem;
+    background: #E7F3FF;
+
+}
+.why{
+ 
+font-size: 2.4rem;
+line-height: 3.6rem;
+
+text-align: center;
+margin: 2rem auto 2.3rem;
+color: #181918;
+}
+.wrapperGrid{
+    display: grid;
+grid-template-columns: 1fr;
+gap: 3rem;
+margin: 6rem auto;
+width: 100%;
+}
+@media only screen and (min-width: 768px) {
+.fade{
+
+    color: #3180D1;
+        animation: fade 3s infinite 2s ease-in-out, move 3s infinite 3s;
+    
+    }
+
+    @keyframes fade {
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 1;
+        }
+    }
+        @keyframes move {
+            0%, 100% {
+                transform: translateY(0); 
+            }
+            50%{
+                transform: translateY(5%);
+            }
+            100% {
+                transform: translateX(5%);
+            }
+        }
+        @keyframes moveup {
+            0%, 100% {
+                transform: translateY(0); 
+            }
+          
+            50% {
+                transform: translateY(10%);
+            }
+        }
+        h3::before{
+            animation: moveup 2s infinite alternate;
+        }
+        .rectangle{
+            animation: move 2s infinite alternate;
+        }
+    }
+
+@media only screen and (min-width: 768px) {
+    .wrapperGrid{
+        display: grid;
+grid-template-columns:  1fr 1fr;
+gap: 3rem;
+margin: 6rem auto;
+width: 100%;
+    }}
+.whyWork{
+    font-size: 1.6rem;
+
+line-height: 2.4rem;
+align-items: center;
+text-align: center;
+padding: .1rem;
+width: 100%;
+}
+.reason{
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  border-radius: 1rem;
+   text-align: center;
+margin: 0 auto;
+background-color: white;
+
+
+}
+
+/* .reason1{
+    gap:2rem;
+} */
+h3.result{
+    font-size: 2rem;
+line-height: 2.4rem;
+padding: 0 8rem;
+}
+.rP{
+    padding: 1rem 2rem 3rem;
+    margin: 0 auto;
+}
+.rParag{
+   
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.resultImage{
+    padding: 4rem;
+}
+.who{
+    width: 100%;
+}
+.flexWrapBlue{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2.5rem 0;
+    margin: .5rem auto 2.2rem;
+    background: #E7F3FF;
+   
+}
+
+.flexWrapWhite{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2.5rem 0;
+    margin: .5rem auto 2.2rem;
+}
+@media only screen and (min-width: 768px) {
+    .flexWrapBlue {
+        display: flex;
+        flex-direction: row;
+     
+        justify-content: center;
+        padding: 15px 45px 0;
+        margin: 5px auto 22px;
+        background: #E7F3FF;
+    }
+    .title{
+        padding: 20px;
+    }
+    .flexWrapWhite{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        padding: 15px 45px 0;
+        margin: 5px auto 22px;
+    }
+    .jpeg{
+        margin-bottom: 2rem;
+    }
+    .our{
+        font-size: 2rem;
+    }
+}
+.wee{
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 1rem;
+}
+.digMarkImg{
+    width: 100%;
+}
+h3.our.p{
+    font-size: 1.8rem;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+.lastSection{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+}
+button.more{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+padding: 1rem 5.2rem;
+color: white;
+width: 17.3rem;
+font-size: 1.2rem;
+height: 3.1rem;
+margin: 2.5rem 0;
+background: #3180D1;
+border-radius: .5rem;
+align-items: center;
+border: none;
+}
+.flex1 ,.flex2, .flex3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1.5rem 2.5rem 0;
+    margin: .5rem auto 2.2rem;
+    
+}
+.portfolioImg{
+width: 100%;
+}
+button:hover{
+    background: #f66733;
+    transition: background 0.3s ease-in-out;
+    animation: scale 0.3s forwards;
+    animation-direction: alternate;
+}
+.lastSection{
+    background: #E7F3FF;
+    align-items: center;
+    width: 100%;
+}
+
+button.seeAll{
+    display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+padding: 1rem 5.2rem;
+color: white;
+width: 17.3rem;
+font-size: 1.2rem;
+height: 3.1rem;
+margin: 2.5rem 0;
+background: #3180D1;
+border-radius: .5rem;
+align-items: center;
+border: none;
+}
+.portfolio{
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (min-width: 768px) {
+    .portfolio{ display: flex;
+     flex-direction: row;
+   
+    }
+ }
+@keyframes scale{
+   0%{ transform: scale(1.0);}
+   100%{ transform: scale(1.1);}
+}
+.before{
+    
+position: relative;
+}
+.beforeFooter{
+    position: relative;
+    width: 100%;
+
+    
+}
+.beforeFooterText{
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem 1.5rem;
+}
+
+img.beforeFoot{
+    width: 100%;
+    object-fit: cover;
+}
+.our.foot{
+    text-align: center;
+    color: white;
+}
+
+button.contact{
+    display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 1rem 5.2rem;
+background: white;
+width: 17.3rem;
+font-size: 1.2rem;
+height: 3.1rem;
+margin: 2.5rem auto 0;
+color: #3180D1;
+border-radius: .5rem;
+align-items: center;
+border: none;
+}
+.fParag{
+    color: white;
+    text-align: center;
+    display: flex;
+    padding: 0 5rem;
+    font-size: 1.5rem;
+    justify-content: center;
+}
+/*
+this is desktop
+.wrapperGrid{
+    display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+gap: 3rem;
+}
+.whyWork{
+    font-size: 1.6rem;
+
+line-height: 2.4rem;
+align-items: center;
+text-align: center;
+padding: .1rem;
+width: 100%;
+}
+
+.reason{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+   text-align: center;
+
+background-color: white;
+
+
+}
+.reason1{
+    gap:2rem;
+}
+h3.result{
+    font-size: 1.6rem;
+line-height: 2.4rem;
+} */
+
+
+
+
+/* 
+position: absolute;
+width: 363px;
+height: 337px;
+left: -24px;
+top: 0px;
+
+/* White 100 
+
+background: #FFFFFF;
+border-radius: 10px; */
+
+
+
+
+
+/* position: absolute;
+width: 75px;
+height: 30px;
+left: 113px;
+top: 193px;
+
+
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 30px;
+
+color: #000000; */
+
+
+
+
+
+/* //styleName: Body for Desktop/Regular;
+font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center; */
