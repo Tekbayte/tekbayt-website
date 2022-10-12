@@ -3,15 +3,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Tekbayte</title>
-   
+    <link rel="shortcut icon" href="./Assets/LogoNav.png" type="image/x-icon">   
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
-    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/home.css">
 
+    <title>Welcome to Tekbayt</title>
 </head>
+
 <body>
    <div class="wrapper">
     <!-- Header Goes Here -->
@@ -19,7 +20,7 @@
         <div id="navbar">
             <!-- Navbar Logo -->
             <div id="logo">
-                <a href="/our-work.html">
+                <a href="./index.html">
                     <img src="./Assets/LogoNav.png" alt="Tekbayt Logo">
                 </a>
             </div>
@@ -28,12 +29,12 @@
             <div class="navbar-desktop">
                 <nav>
                     <ul class="nav-item">
-                        <a href="index.html">Home</a>
-                        <a href="#">Services</a>
-                        <a href="./our-work.html">Our Work</a>
-                        <a href="#">About Us</a>
+                        <a class="nav-link active" href="./index.html">Home</a>
+                        <a class="nav-link" href="./services.html">Services</a>
+                        <a class="nav-link" href="./our-work.html">Our Work</a>
+                        <a class="nav-link" href="#">About Us</a>
                         <div class="vertical-line"></div>
-                        <a href="./contact-us.html">Contact Us</a>
+                        <a class="nav-link" href="./contact-us.html">Contact Us</a>
                     </ul>
                 </nav>
             </div>
@@ -47,34 +48,33 @@
         <!-- Navbar on Mobile Devics -->
         <nav class="navbar-mobile">
             <ul class="nav-item">
-                <a href="index.html">Home</a>
-                <a href="#">Services</a>
+                <a href="./index.html">Home</a>
+                <a href="./services.html">Services</a>
                 <a href="./our-work.html">Our Work</a>
                 <a href="#">About Us</a>
             </ul>
             <a href="./contact-us.html" class="contact-us">Contact Us</a>
         </nav>
     </header>
-    <section class="intro">
+
+    <section class="intro" id="home">
         <div class="divspeed">
-          
             <h3 class="speed">Increase the <span class="fade">speed</span> <br /> of your business
             </h3>
             
-            <p class="we"> we speed up the speed of your business growth by building <br />amazing & unique brands for your business and 
-                <br />
-                products with the best customer you can think of</p>
+            <p class="we"> we speed up the speed of your business growth by building <br> amazing & unique brands for your business and <br> products with the best customer you can think of
+            </p>
             <button class="project">Start a Project</button>
-            
         </div>
-        <div class="firstImg">
-        
-                <div class="downloader2div"><img src="./assets/Downloader 2.png" alt="downloader2" class="downloader2">
-                </div>
-   <div class="rectanglediv"> <img src="./Assets/excellent.png" alt="rectangle" class="rectangle"></div>
 
+        <div class="firstImg">
+            <div class="downloader2div"><img src="./assets/Downloader 2.png" alt="downloader2" class="downloader2">
+            </div>
+            <div class="rectanglediv">
+                <img src="./Assets/excellent.svg" alt="rectangle" class="rectangle">
+            </div>
         </div>
-           </section> 
+    </section> 
            <section class="whyWorkWithUs">
             <div class="whyWorkWithUsWrapper">
                 <h3 class="why">Why work with us </h3>
@@ -89,10 +89,17 @@
                 that brings significant
                      result to your business</p>
                 </div></div>
-                    <div class="reason reason2"><div class="resultImage"><img src="./Assets/growthEclipse.png" alt=""></div><div class="resultdiv"><h3 class="result">Growth</h3></div>
-                    <div class="rP"><p class="rParag">We help your business grow
-through the best digital services</p>
-                        
+                    <div class="reason reason2">
+                        <div class="resultImage">
+                            <img src="./Assets/growthEclipse.png" alt="">
+                        </div>
+                        <div class="resultdiv">
+                            <h3 class="result">Growth</h3>
+                        </div>
+                    <div class="rP">
+                        <p class="rParag">
+                            We help your business grow through the best digital services
+                        </p>
                     </div></div>
                     <div class="reason reason3">
                         <div class="resultImage"><img src="./Assets/resultEclipse.png" alt=""></div><div class="resultdiv"><h3 class="result">On time delivery</h3></div>
@@ -111,7 +118,7 @@ through the best digital services</p>
            </section>
            <section class="who">
               <h3 class="why"> Who we are</h3>
-                <p class="wee">We boast of amazing results for our clients that will  help speed up and accelerate the growth of your business with our
+                <p class="wee">We boast of amazing results for our clients that will  help speed up and accelerate the growth of <br> your business with our
                well scrutinized and goal oriented digital marketing experts.</p>
                 <div class="flexWrapBlue">
                 <div class="jpeg"><img src="./Assets/DigitalMarketingg.png" alt="" class="digMarkImg"></div>
@@ -180,18 +187,16 @@ through the best digital services</p>
     </div>
 
             <button class="seeAll">See All</button>
-</section>
-<div class="before">
-    <div class="beforeFooter">
-        <img src="./Assets/beforeFooter.png" alt="" class="beforeFoot">
-        </div>
+    </section>
+
+    <div class="before">
         <div class="beforeFooterText">
             <p class="fParag">
-                Let's help you build your business & make your digital product standout
+                Let's help you build your business & <br> make your digital product standout
             </p>
-            <button class="contact">
-                Contact us
-            </button>
+            <a href="./contact-us.html">
+                <button class="contact">Contact us</button>
+            </a>
         </div>
     </div>
 </div>
@@ -244,7 +249,7 @@ through the best digital services</p>
     </footer>
 
    
-</div>
- <script src="./script/our-work.js"></script>
+    </div>
+ <script src="./script/main.js"></script>
 </body>
 </html>
