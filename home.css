@@ -32,11 +32,6 @@ a{
     align-items: center;
 }
 
-.active{
-    color: #3180D1 !important;
-    font-weight: 600 !important;
-  }
-
 #logo img{
     width: 4rem;
 }
@@ -117,10 +112,6 @@ a{
    
 }
 
-button{
-    cursor: pointer !important;
-}
-
 .navbar-desktop .nav-item a:hover{
     color: #3180D1;
 }
@@ -145,159 +136,78 @@ button{
     margin: 0 3rem;
 }
 
-#home{
-    margin: 10rem auto;
-}
-
 h3.speed {
     text-align: center;
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 600;
-    line-height: 1.3;
-    margin-bottom: 1rem;
+    margin: 9rem auto 0;
+    line-height: 4.6rem;
+    top:0;
+    left: 0;
+/* width: 99%; */
+}
+@media only screen and (max-width: 767px) {
+    h3.speed {
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 9rem auto 0;
+        line-height: 4.6rem;
+        top:0;
+        left: 0;
+    /* width: 99%; */
+    }
 }
 
  .divspeed{
  margin: 0 auto;
 } 
-
 h3.speed::before{
     content: url(/Assets/VectorIncrease.png);
     position: absolute;
     width: 100%;
+
     display: flex;
-    justify-content: center;
-    top: 5.8rem;
+justify-content: center;
+
+    top: 13.8rem;
     right: 7.5rem;
-    animation: fade 3s infinite 2s ease-in-out, change 3s infinite 1s ease-in-out, moveup 3s infinite alternate;
 }
-@keyframes change{
-    0%{
-        content: url(/Assets/VectorIncrease.png);
-    }
-100%{
-    content: url(/Assets/vectorIncreaseOrange.png);
-}
-}
-@keyframes moveup {
-    0%, 100% {
-        transform: translateY(0); 
-    }
-  
-    50% {
-        transform: translateY(10%);
-    }
-}
-
-@keyframes fade {
-    0%{
-        opacity: 0;
-    }
-    50%{
-        opacity: 1;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-
-    h3.speed {
-        text-align: center;
-        font-size: 3rem;
-        font-weight: 600;
-        line-height: 1.3;
-        margin-bottom: 1rem;
-    }
-    
-    h3.speed::before{
-        content: url(/Assets/VectorIncrease.png);
-        position: absolute;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        top: 13.5rem;
-        right: 8.5rem;
-    }
-       @keyframes moveup {
-            0%, 100% {
-                transform: translateY(0); 
-            }
-          
-            50% {
-                transform: translateY(10%);
-            }
-        }
-        h3::before{
-            animation: moveup 2s infinite alternate;
-        }
-}
-
 
 .we {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.6rem;
     text-align: center;
-    padding: 0 3rem;
+   padding: 0 3rem;
     width: 99%;
     /* Black 80 */
+    
     color: #464746;
 }
-
-.project{
-    /* display: block; */
-    font-size: 1.7rem;
+button.project{
+   
+    display: block;
+    margin: 0 auto;
 }
-
 .firstImg{
     margin: 0 auto;
-    position: relative;
-}
 
+    
+}
 .downloader2div{
 display: flex;
 justify-content: center;
 align-items: center;
 }
-
 img.downloader2{
     margin: 0 auto;
-    width: 95%;
+    width: 99%;
     padding: 0 1rem;
     
 }
-
-.our{
-    font-size: 1.8rem;
-    padding: 1.2rem 0;
-}
-
-/* Before Footer */
-.before{
-    display: relative;
-    background-image: url('../Assets/beforeFooterImg.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    opacity: 0.6;
-    height: 45%;
-}
-
-.beforeFooterText{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5rem 0;
-    font-size: 2rem;
-}
-
-.before .contact{
-    margin-bottom: 5rem;
-    color: #000;
-    font-weight: bold;
-}
-
 @media only screen and (min-width: 768px) {
     img.downloader2 {
         margin: 8rem auto 0;
@@ -306,17 +216,54 @@ img.downloader2{
     }
  }
 .rectanglediv{
-    position: absolute;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     /* align-self: start; */
-    bottom: -1.5rem;
-    left: 2rem;
-    z-index: 2;
+    top: -9.2rem;
+    z-index: 1;
+    left: -12rem;
 }
-
 @media only screen and (min-width: 768px) {
+    .intro{
+        display: flex;
+        margin: 0;
+        position: relative;
+        justify-content:space-around;
+        padding: 3rem;
+    }
+    .we{
+        padding: 0;
+        text-align: left;
+        width: 100%;
+    }
+    .speed{
+        position: relative;
+        margin: 0;
+    }
+    .divspeed{
+        position: relative;
+        margin: 0;
+        text-align: left;
+    }
+    h3.speed{
+        text-align: left;
+    }
+    h3.speed::before{
+        content: url(/Assets/VectorIncrease.png);
+        position: absolute;
+        width: 100%;
+    
+        display: flex;
+    justify-content: center;
+    
+        /* top: 4.5rem; */
+        right: 105px;
+    }
+   
+}
+@media only screen and (min-width: 1024px) {
     .intro{
         display: flex;
         margin: 0;
@@ -350,81 +297,37 @@ img.downloader2{
     justify-content: center;
     
         top: 4.5rem;
-        right: 105px;
+        right: 115px;
     }
    
 }
-@media only screen and (min-width: 1024px) {
-    .intro{
-        display: flex;
-        margin: 0;
-        position: relative;
-        justify-content:space-around;
-        padding: 3rem;
-    }
-    .we{
-        padding: 0;
-        text-align: left;
-        width: 100%;
-    }
-    .speed{
-        position: relative;
-        margin: 0;
-    }
-    .divspeed{
-        position: relative;
-        margin: 0;
-        text-align: left;
-    }
-    h3.speed{
-        text-align: left;
-    }
-    h3.speed::before{
-        content: url(/Assets/VectorIncrease.png);
-
-        position: absolute;
-        width: 100%;
-    
-        display: flex;
-    justify-content: center;
-    
-        /* top: 3.8rem; */
-        right: 158px;
-    }
-   
-}
-
-.project{
+button.project{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1.5rem 5.2rem;
-    color: white;
-    /* width: 20.3rem; */
-    font-size: 1.7rem;
-    /* height: 4.1rem; */
-    margin: 2.5rem auto;
-    background: #3180D1;
-    border-radius: .5rem;
-    align-items: center;
-    border: none;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+padding: 1rem 5.2rem;
+color: white;
+width: 20.3rem;
+font-size: 1.2rem;
+height: 4.1rem;
+margin: 2.5rem auto;
+background: #3180D1;
+border-radius: .5rem;
+align-items: center;
+border: none;
 }
-
 .our{
     margin-top: 1.2rem;
 }
-
 @media only screen and (min-width: 768px) {
-    .project{
+    button.project{
         margin: 2.5rem 0;
        }
-
        .firstImg{
         margin: 0;
        }
     }
-
 .whyWorkWithUsWrapper{
     position: relative;
     display: flex;
@@ -441,29 +344,30 @@ img.downloader2{
     background: #E7F3FF;
 
 }
-
 .why{
  
-    font-size: 2.4rem;
-    line-height: 3.6rem;
+font-size: 2.4rem;
+line-height: 3.6rem;
 
-    text-align: center;
-    margin: 2rem auto 2.3rem;
-    color: #181918;
+text-align: center;
+margin: 2rem auto 2.3rem;
+color: #181918;
 }
-
 .wrapperGrid{
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 3rem;
-    margin: 6rem auto;
-    width: 100%;
+grid-template-columns: 1fr;
+gap: 3rem;
+margin: 6rem auto;
+width: 100%;
 }
-
 @media only screen and (min-width: 768px) {
 .fade{
+
     color: #3180D1;
-    animation: fade 3s infinite 2s ease-in-out, move 3s infinite 3s;
+        
+    -webkit-animation-name: fade, move;
+    -webkit-animation-duration: 2s, 4s;
+    -webkit-animation-delay:0s, 0s ;
     }
 
     @keyframes fade {
@@ -495,7 +399,7 @@ img.downloader2{
             }
         }
         h3::before{
-            animation: moveup 2s infinite alternate;
+            animation: moveup 2s infinite alternate, fade 2s infinite 2s ease-in-out;
         }
         .rectangle{
             animation: move 2s infinite alternate;
@@ -505,22 +409,20 @@ img.downloader2{
 @media only screen and (min-width: 768px) {
     .wrapperGrid{
         display: grid;
-        grid-template-columns:  1fr 1fr;
-        gap: 3rem;
-        margin: 6rem auto;
-        width: 100%;
-    }
-}
-
+grid-template-columns:  1fr 1fr;
+gap: 3rem;
+margin: 6rem auto;
+width: 100%;
+    }}
 .whyWork{
     font-size: 1.6rem;
-    line-height: 2.4rem;
-    align-items: center;
-    text-align: center;
-    padding: .1rem;
-    width: 100%;
-}
 
+line-height: 2.4rem;
+align-items: center;
+text-align: center;
+padding: .1rem;
+width: 100%;
+}
 .reason{
     position: relative;
     width: 90%;
@@ -528,47 +430,44 @@ img.downloader2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 1rem;
-    text-align: center;
-    margin: 0 auto;
-    background-color: white;
+  border-radius: 1rem;
+   text-align: center;
+margin: 0 auto;
+background-color: white;
+
+
 }
 
 /* .reason1{
     gap:2rem;
 } */
-.result{
+h3.result{
     font-size: 2rem;
-    line-height: 2.4rem;
-    padding: 0 8rem;
+line-height: 2.4rem;
+padding: 0 8rem;
 }
-
 .rP{
     padding: 1rem 2rem 3rem;
     margin: 0 auto;
 }
-
 .rParag{
    
     font-size: 1.5rem;
-    line-height: 1.8;
+    line-height: 2rem;
 }
-
 .resultImage{
     padding: 4rem;
 }
-
 .who{
     width: 100%;
 }
-
 .flexWrapBlue{
     display: flex;
     flex-direction: column;
     padding: 1.5rem 2.5rem 0;
     margin: .5rem auto 2.2rem;
     background: #E7F3FF;
-    margin-top: 2rem; 
+   
 }
 
 .flexWrapWhite{
@@ -581,8 +480,8 @@ img.downloader2{
     .flexWrapBlue {
         display: flex;
         flex-direction: row;
+     
         justify-content: center;
-        align-items: center;
         padding: 15px 45px 0;
         margin: 5px auto 22px;
         background: #E7F3FF;
@@ -594,80 +493,68 @@ img.downloader2{
         display: flex;
         flex-direction: row-reverse;
         justify-content: center;
-        align-items: center;
         padding: 15px 45px 0;
         margin: 5px auto 22px;
     }
     .jpeg{
         margin-bottom: 2rem;
-        width: 100%;
     }
     .our{
-        font-size: 2.4rem;
-        padding: 1rem 0;
+        font-size: 2rem;
     }
 }
-
 .wee{
     text-align: center;
-    font-size: 1.6rem;
-    padding: 1.2rem 0;
-    line-height: 1.6;
+    font-size: 1.4rem;
+    padding: 1rem;
 }
-
 .digMarkImg{
     width: 100%;
 }
-
 h3.our.p{
     font-size: 1.8rem;
     margin: 0 auto;
     margin-top: 1rem;
 }
-
 .lastSection{
     display: flex;
     flex-direction: column;
     padding: 1rem;
 
 }
-
 button.more{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1.4rem 5.2rem;
-    color: white;
-    /* width: 17.3rem; */
-    font-size: 1.5rem;
-    /* height: 3.1rem; */
-    margin: 2.5rem 0;
-    background: #3180D1;
-    border-radius: .5rem;
-    align-items: center;
-    border: none;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+padding: 1rem 5.2rem;
+color: white;
+width: 17.3rem;
+font-size: 1.2rem;
+height: 3.1rem;
+margin: 2.5rem 0;
+background: #3180D1;
+border-radius: .5rem;
+align-items: center;
+border: none;
 }
-
 .flex1 ,.flex2, .flex3{
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 1.5rem 2.5rem 0;
     margin: .5rem auto 2.2rem;
+    
 }
-
 .portfolioImg{
 width: 100%;
 }
-
 button:hover{
     background: #f66733;
     transition: background 0.3s ease-in-out;
     animation: scale 0.3s forwards;
     animation-direction: alternate;
 }
-
 .lastSection{
     background: #E7F3FF;
     align-items: center;
@@ -676,27 +563,20 @@ button:hover{
 
 button.seeAll{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 1.3rem 5.2rem;
-    color: white;
-    /* width: 17.3rem; */
-    font-size: 1.7rem;
-    /* height: 3.1rem; */
-    margin: 2.5rem 0;
-    background: #3180D1;
-    border-radius: .5rem;
-    align-items: center;
-    border: none;
-    transition: background 0.5s ease-in-out;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+padding: 1rem 5.2rem;
+color: white;
+width: 17.3rem;
+font-size: 1.2rem;
+height: 3.1rem;
+margin: 2.5rem 0;
+background: #3180D1;
+border-radius: .5rem;
+align-items: center;
+border: none;
 }
-
-.seeAll:hover{
-    background: #f66733;
-    transition: background 0.5s ease-in-out;
-}
-
 .portfolio{
     display: flex;
     flex-direction: column;
@@ -704,26 +584,37 @@ button.seeAll{
 @media only screen and (min-width: 768px) {
     .portfolio{ display: flex;
      flex-direction: row;
+   
     }
  }
 @keyframes scale{
    0%{ transform: scale(1.0);}
    100%{ transform: scale(1.1);}
 }
-
 .before{
-    position: relative;
+    
+position: relative;
 }
-
 .beforeFooter{
     position: relative;
     width: 100%;
+
+    
+}
+.beforeFooterText{
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1.5rem 1.5rem;
 }
 
 img.beforeFoot{
     width: 100%;
-    object-fit: contain;
-    opacity: 0.6;
+    object-fit: cover;
 }
 .our.foot{
     text-align: center;
@@ -732,26 +623,20 @@ img.beforeFoot{
 
 button.contact{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 1.4rem 5.2rem;
-    background: white;
-    /* width: 17.3rem; */
-    font-size: 1.5rem;
-    /* height: 3.1rem; */
-    margin: 2.5rem auto 0;
-    color: #3180D1;
-    border-radius: .5rem;
-    align-items: center;
-    border: none;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+padding: 1rem 5.2rem;
+background: white;
+width: 17.3rem;
+font-size: 1.2rem;
+height: 3.1rem;
+margin: 2.5rem auto 0;
+color: #3180D1;
+border-radius: .5rem;
+align-items: center;
+border: none;
 }
-
-.contact:hover{
-    background: #3180D1;
-    color: #fff;
-}
-
 .fParag{
     color: white;
     text-align: center;
@@ -832,7 +717,6 @@ button.contact{
     font-size: 1.5rem;
     text-align: center;
     color: #fff;
-    padding-top: 3rem;
 }
 
 /* Media Queries */
@@ -841,10 +725,6 @@ button.contact{
     /* hide desktop navbar */
     #navbar .navbar-desktop{
         display: none;
-    }
-
-    .speed{
-        font-size: 3rem;
     }
 }
 
@@ -885,9 +765,5 @@ button.contact{
 
     #hamburger-menu, .navbar-mobile{
         display: none;
-    }
-
-    .fParag{
-        font-size: 1.8rem;
     }
 }
