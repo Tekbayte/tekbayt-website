@@ -74,44 +74,48 @@
             </div>
 
             <div>
-                <form class="contact-us-form">
+                <form method="POST" class="contact-us-form" id="contact-us" enctype="multipart/form-data">
                     <div>
                         <label for="fullName">Full Name</label>
                         <input 
-                            type="text" name="fullName" placeholder="Enter full name"
+                            type="text" id="fullName" name="fullName" placeholder="Enter full name"
+                            required
                         >
                     </div>
 
                     <div>
-                        <label for="company">Company Name</label>
+                        <label for="companyName">Company Name</label>
                         <input 
-                            type="text" name="company" placeholder="Enter company name"
+                            type="text" id="companyName" name="companyName" placeholder="Enter company name"
+                            required
                         >
                     </div>
 
                     <div>
                         <label for="email">Email</label>
                         <input 
-                            type="email" name="email" placeholder="Email address"
+                            type="email" id="email" name="email" placeholder="Email address"
+                            required
                         >
                     </div>
 
                     <div>
                         <label for="phone">Phone</label>
                         <input 
-                            type="tel" name="email" placeholder="Your phone number"
+                            type="tel" id="phone" name="phone" placeholder="Your phone number"
+                            required
                         >
                     </div>
 
                     <div>
                         <label for="comment">What can we help you with?</label>
-                        <textarea name="comment" cols="30" rows="10" placeholder="Comment"></textarea>
+                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comment" required></textarea>
                     </div>
 
                     <div>
-                        <label for="know-about-us">How did you know about us?</label>
-                        <select name="know-about-us">
-                            <option selected>Kindly choose one</option>
+                        <label for="hearAboutUs">How did you know about us?</label>
+                        <select name="hearAboutUs" id="hearAboutUs" required>
+                            <option value="">Kindly choose one</option>
                             <option value="internet">Internet</option>
                             <option value="social media">Social Media</option>
                             <option value="relatives">Family and Friends</option>
@@ -119,12 +123,18 @@
                             <option value="others">Others</option>
                         </select>
                     </div>
-
-                    <button type="submit" class="submit-button">Submit</button>
+                    <div class="form-buttons">
+                        <button type="submit" class="submit-button">Submit</button>
+                        <button type="reset" class="reset-button">RESET</button>
+                    </div>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- Display Pop Up After Successfully Submitting Contact Form -->
+    <div id="pop-up">
+    </div>
 
     <!-- Footer starts here -->
     <footer id="footer">
@@ -173,6 +183,17 @@
         </div>
     </footer>
 
+
+    <!-- Scripts -->
+    <script src="//code.tidio.co/lhe5zo68obxwm9dhsmhl7q22dcauwyin.js" async></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("bigNATc1WU2t7npuu");
+        })();
+     </script>
     <script src="./script/main.js"></script>
 </body>
 </html>
