@@ -41,6 +41,11 @@ li{
     align-items: center;
 }
 
+.active{
+    color: #3180D1 !important;
+    font-weight: 600 !important;
+  }
+
 #logo img{
     width: 4rem;
 }
@@ -286,13 +291,19 @@ li{
     border: 0.15rem solid #3180D1;
     font-size: 1.4rem;
     letter-spacing: 0.1rem;
+    outline: none;
 }
 
 .contact-us-form div select option{
     font-size: 1.6rem;
 }
 
-.contact-us-form .submit-button{
+.form-buttons{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us-form .submit-button, .contact-us-form .reset-button{
     padding: 1.5rem 0;
     font-size: 1.6rem;
     text-transform: uppercase;
@@ -304,11 +315,57 @@ li{
     transition: background 0.4s ease-in-out;
 }
 
+.reset-button{
+    background: #ca1313 !important;
+    margin: 2rem 0;
+}
+
+.reset-button:hover{
+    background: #3a27ba !important;
+}
+
 .contact-us-form .submit-button:hover{
     background: #3180D1;
     transition: background 0.4s ease-in-out;
 }
 
+/* Checking form Validity */
+.contact-us-form div input.invalid, .contact-us-form div textarea.invalid, .contact-us-form div select.invalid{
+    border: 0.15rem solid #ca1313;
+}
+
+.contact-us-form div input.valid, .contact-us-form div textarea.valid, .contact-us-form div select.valid{
+    border: 0.15rem solid #0bc64d;
+}
+
+#pop-up{
+    position: absolute;
+    opacity: 0;
+    top: -100rem;
+    left: 0;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30rem;
+    height: 30rem;
+    background: #3a27ba;
+    border-radius: 1rem;
+    text-align: center;
+    transition: top 1s ease-in-out;
+}
+
+#pop-up h3{
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+#pop-up p{
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: #fff;
+}
 
 /* Footer Section */
 #footer{
@@ -377,6 +434,7 @@ li{
     font-size: 1.5rem;
     text-align: center;
     color: #fff;
+    padding-top: 3rem;
 }
 
 
