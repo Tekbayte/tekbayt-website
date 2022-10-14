@@ -149,14 +149,128 @@ li{
     margin: 0 3rem;
 }
 
+/*main*/
+
+.page{
+    margin-top: 9rem;
+    grid-template-columns: 1fr;
+    grid-template-areas: "team"
+    "team-paragraph"
+    "image-slider"
+    "dev1"
+    "designer1"
+    "designer2"
+    "designer3"
+    "dev2"
+    "designer4"
+    "dev3"
+    "designer5"
+    "designer6"
+    "designer7";
+}
+.team-header{
+    grid-area: team;
+}
+h3.team{
+    text-align: center;
+
+padding: 2.1rem;
+font-size: 1.5rem;
+}
+.team-paragraph{
+    grid-area: team-paragraph;
+}
+
+span.team::before{
+   
+    margin-top: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 0 4rem 2rem;
+    font-size: 1rem;
+content: 'We are a group of young minds connected by a strong affinity of problem solving for growth and development';
+    animation: text-animate 3s ease-in-out 0s infinite;
+}
 
 
-
-
-
-
-
-
+@keyframes text-animate{
+    0%{
+        content: 'We are a group of young minds connected by a strong affinity of problem solving for growth and development';
+    }
+    25%{
+        content: "Our team is made up of well trained and certified expert developers, UX researchers, UI designers and Product designers";
+    }
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+/*desktop*/
+@media only screen and (min-width: 1025px) {
+    .page{
+        display: grid;
+        margin-top: 8rem;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "team team"
+        "team-paragraph team-paragraph"
+        "image-slider image-slider"
+        "dev1 designer1"
+        "designer2 designer3"
+        "dev2 designer4"
+        "dev3 designer5"
+        "designer6 designer7";
+    }
+    h3.team{
+        font-size: 3rem;
+    }
+    .team-header{
+        grid-area: team;
+    }
+    span.team::before{
+        font-size: 1.8rem;
+        padding: 0 45rem 2rem;
+        
+    }
+    }
+.image-slider{
+    grid-area: image-slider;
+}
+.dev1{
+    grid-area: dev1;
+    
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.designer1{
+    grid-area: designer1;
+}
+.designer2{
+    grid-area: designer2;
+}
+.designer3{
+    grid-area: designer3;
+}
+.dev2{
+    grid-area: dev2;
+}
+.designer4{
+    grid-area: designer4;
+}
+.dev3{
+    grid-area: dev3;
+}
+.designer5{
+    grid-area: designer5;
+}
+.designer6{
+    grid-area: designer6;
+}
+.designer7{
+    grid-area: designer7;
+}
 /* Footer Section */
 #footer{
     background: #3180D1;

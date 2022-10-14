@@ -365,9 +365,9 @@ width: 100%;
 
     color: #3180D1;
         
-    -webkit-animation-name: fade, move;
-    -webkit-animation-duration: 2s, 4s;
-    -webkit-animation-delay:0s, 0s ;
+    animation-name: fade, move;
+    duration: 2s, 4s;
+    animation-delay:0s, 0s ;
     }
 
     @keyframes fade {
@@ -554,6 +554,7 @@ button:hover{
     transition: background 0.3s ease-in-out;
     animation: scale 0.3s forwards;
     animation-direction: alternate;
+    animation-timing-function: ease-in-out;
 }
 .lastSection{
     background: #E7F3FF;

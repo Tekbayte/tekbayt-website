@@ -93,12 +93,12 @@ a{
     background: #3180D1;
     margin: 0 0rem 2rem 2rem;
     border-radius: 0.4rem;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out alternate;
 }
 
 .navbar-mobile .contact-us:hover{
     background: #f66733;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out alternate;
 }
 
 /* Desktop Navbar */
@@ -169,7 +169,7 @@ h3.speed::before{
     justify-content: center;
     top: 5.8rem;
     right: 7.5rem;
-    animation: fade 3s infinite 2s ease-in-out, change 3s infinite 1s ease-in-out, moveup 3s infinite alternate;
+    animation: fade 2s ease-in-out 2s infinite alternate, change 2s ease-in-out 1s infinite alternate, moveup 3s ease-in-out 0s infinite alternate;
 }
 @keyframes change{
     0%{
@@ -227,7 +227,7 @@ h3.speed::before{
             }
         }
         h3::before{
-            animation: moveup 2s infinite alternate;
+            animation: moveup 2s ease-in-out infinite alternate;
         }
 }
 
@@ -463,7 +463,7 @@ img.downloader2{
 @media only screen and (min-width: 768px) {
 .fade{
     color: #3180D1;
-    animation: fade 3s infinite 2s ease-in-out, move 3s infinite 3s;
+    animation: fade 2s ease-in-out 2s infinite alternate, move 1s ease-in-out 0s infinite;
     }
 
     @keyframes fade {
@@ -495,10 +495,10 @@ img.downloader2{
             }
         }
         h3::before{
-            animation: moveup 2s infinite alternate;
+            animation: moveup 2s ease-in-out 0s infinite alternate;
         }
         .rectangle{
-            animation: move 2s infinite alternate;
+            animation: move 2s ease-in-out 0s infinite alternate;
         }
     }
 
@@ -666,7 +666,9 @@ button:hover{
     transition: background 0.3s ease-in-out;
     animation: scale 0.3s forwards;
     animation-direction: alternate;
-}
+        animation-timing-function: ease-in-out;
+    }
+
 
 .lastSection{
     background: #E7F3FF;
