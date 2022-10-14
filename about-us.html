@@ -10,6 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
     <link rel="stylesheet" href="./style/work-about.css">
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
     <title>About Us | Tekbayt</title>
 </head>
 <body>
@@ -62,19 +67,34 @@
 <div class="team-header"><h3 class="team">TEKBAYT TEAM</h3></div>
 <div class="team-paragraph"><p class="team"><span class="team"></span></p></div>
   
-    <div class="image-slider">
-<img src="./Assets/Our Team/Andrew2.png" alt="" class="slides">
+    <div class="image-slider"> <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="./Assets/Our Team/Andrew2.png" alt="Andrew" class="slides"></div>
+          <div class="swiper-slide"><img src="./Assets/Our Team/phina.png" alt="Helen" class="slides2"></div>
+          <div class="swiper-slide"><img src="./Assets/Our Team/kay.png" alt="Kay" class="slides3"></div>
+          <div class="swiper-slide"><img src="./Assets/Our Team/OverwatchCoder.png" alt="" class="slides3"></div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div>
+          <div class="swiper-slide">Slide 7</div>
+          <div class="swiper-slide">Slide 8</div>
+          <div class="swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+
     </div>
-    <div class="dev1"><img src="./Assets/Our Team/Oluwakayode.png" alt="" class="dev1-img"></div>
-    <div class="designer1"><img src="./Assets/Our Team/Blessing.png" alt="" class="dev2-img"></div>
-    <div class="designer2"></div>
-    <div class="designer3"></div>
-    <div class="dev2"></div>
-    <div class="designer4"></div>
-    <div class="dev3"></div>
-    <div class="designer5"></div>
-    <div class="designer6"></div>
-    <div class="designer7"></div>
+    <div class="grid dev1"><img src="./Assets/Our Team/Oluwakayode.png" alt="" class="dev1-img"></div>
+    <div class="grid designer1"><img src="./Assets/Our Team/Blessing.png" alt="" class="dev2-img"></div>
+    <div class="grid designer2"></div>
+    <div class="grid designer3"></div>
+    <div class="grid dev2"></div>
+    <div class="grid designer4"></div>
+    <div class="grid dev3"></div>
+    <div class="grid designer5"></div>
+    <div class="grid designer6"></div>
+    <div class="grid designer7"></div>
 </div>
 
 
@@ -137,5 +157,21 @@
          })();
       </script>
      <script src="./script/main.js"></script>
+      <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
 </body>
 </html>

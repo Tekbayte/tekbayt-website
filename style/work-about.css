@@ -148,7 +148,38 @@ li{
     height: 4.5rem;
     margin: 0 3rem;
 }
+/* swipper*/
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
 
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
 /*main*/
 
 .page{
@@ -190,17 +221,28 @@ span.team::before{
     padding: 0 4rem 2rem;
     font-size: 1rem;
 content: 'We are a group of young minds connected by a strong affinity of problem solving for growth and development';
-    animation: text-animate 3s ease-in-out 0s infinite;
+    animation: text-animate 20s ease-in-out 0s infinite;
 }
-
-
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.grid{
+    margin: 4rem;
+}
 @keyframes text-animate{
     0%{
         content: 'We are a group of young minds connected by a strong affinity of problem solving for growth and development';
     }
-    25%{
+    33%{
         content: "Our team is made up of well trained and certified expert developers, UX researchers, UI designers and Product designers";
     }
+    66%{
+        content: "We are committed to helping products and brand owners solve digital challenges limiting their brands";
+    }
+100%{
+    content: "We are a non-discriminate group with no biased view on gender, race or religion. We believe in equality, inclusiveness and diversity";
+}
 }
 img{
     max-width: 100%;
