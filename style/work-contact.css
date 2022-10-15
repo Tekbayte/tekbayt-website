@@ -273,6 +273,7 @@ li{
     display: grid;
     grid-template-columns: repeat(1fr);
     gap: 2rem;
+    margin-top: -1rem !important;
 }
 
 .contact-us-form div{
@@ -501,7 +502,6 @@ li{
 
     #contact-us .contact-us-container{
         grid-template-columns: 1fr 1fr;
-        place-content: center;
     }
 
     #contact-us .contact-us-content{
