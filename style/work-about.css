@@ -204,9 +204,8 @@ li{
 }
 h3.team{
     text-align: center;
-
 padding: 2.1rem;
-font-size: 1.5rem;
+font-size: 1.8rem;
 }
 .team-paragraph{
     grid-area: team-paragraph;
@@ -277,6 +276,7 @@ margin-top: 3.4rem;
 }
 .member-header{
     text-align: center;
+    font-size: 1.8rem;
 }
 .member-paragraph{
     padding: 0 4rem;
@@ -544,5 +544,8 @@ font-size: 1.6rem;
 
     .fParag{
         font-size: 1.8rem;
+    }
+    span.team::before{
+        padding: 0 3.2rem 2rem;
     }
 }
