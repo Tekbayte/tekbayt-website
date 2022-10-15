@@ -220,7 +220,7 @@ span.team::before{
     display: flex;
     justify-content: center;
     padding: 0 4rem 2rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
 content: 'We are a group of young minds connected by a strong affinity of problem solving for growth and development';
     animation: text-animate 20s ease-in-out 0s infinite;
 }
@@ -255,6 +255,9 @@ img{
     font-size: 1.4rem;
     padding: 0 2rem;
 }
+span.team::before{
+    padding: 0 3.2rem 2rem;
+}
 }
 .designer1-img{
 margin: 0 auto;
@@ -278,6 +281,7 @@ margin-top: 3.4rem;
 .member-paragraph{
     padding: 0 4rem;
     text-align: center;
+    font-size: 1.4rem;
 }
 @keyframes text-animate{
     0%{
