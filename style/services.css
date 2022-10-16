@@ -550,9 +550,6 @@
       margin-right: 5em;
     }
 
-     /* Large devices (laptops/desktops, 780px and up) */
-
-  
     /* Media Queries */
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
