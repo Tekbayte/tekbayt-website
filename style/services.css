@@ -330,6 +330,7 @@
 #footer{
   background: #3180D1;
   padding: 4rem 3rem;
+  width: 100%;
 }
 
 #footer .footer-container{
@@ -633,8 +634,8 @@
   #our-works h2{
     font-size: 3rem;
     font-weight: 600;
+    
   }
-  
   #our-works .work-container{
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -643,4 +644,4 @@
     padding: 4rem 0;
   }
 }
-  
+
