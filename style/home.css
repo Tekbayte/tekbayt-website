@@ -234,6 +234,10 @@ h3.speed::before{
         h3::before{
             animation: moveup 2s ease-in-out infinite alternate;
         }
+
+        .rectanglediv{
+            bottom: -1.3rem !important;
+        }
 }
 
 
@@ -303,29 +307,28 @@ img.downloader2{
     font-weight: bold;
 }
 
-@media only screen and (min-width: 768px) {
-    .home-divspeed-p {
-        display: block;
-    }
-
-    img.downloader2 {
-        margin: 8rem auto 0;
-        width: 99%;
-        padding: 0 1rem;
-    }
- }
 .rectanglediv{
     position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     /* align-self: start; */
-    bottom: -1.5rem;
+    bottom: -1.5rem !important;
     left: 2rem;
     z-index: 2;
 }
 
 @media only screen and (min-width: 768px) {
+    .home-divspeed-p {
+        display: block;
+    }
+
+    img.downloader2 {
+        /* margin: 8rem auto 0; */
+        width: 100%;
+        padding: 0 1rem;
+    }
+
     .intro{
         display: flex;
         margin: 0;
@@ -361,8 +364,13 @@ img.downloader2{
         top: 4.5rem;
         right: 105px;
     }
+
+    .rectanglediv{
+        bottom: 4rem !important;
+    }
    
 }
+
 @media only screen and (min-width: 1024px) {
     .intro{
         display: flex;
