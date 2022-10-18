@@ -7,12 +7,16 @@
 html{
     font-family: 'Poppins', sans-serif; 
     font-size: 62.5%;
-    overflow-x: hidden;
     scroll-behavior: smooth;
-    }
+}
+
 
 a{
     text-decoration: none;
+}
+
+.wrapper{
+    overflow-x: hidden;
 }
 
 /* Navbar Section */
@@ -36,7 +40,7 @@ a{
 .active{
     color: #3180D1 !important;
     font-weight: 600 !important;
-  }
+}
 
 #logo img{
     width: 4rem;
@@ -403,7 +407,7 @@ img.downloader2{
         width: 100%;
     
         display: flex;
-    justify-content: center;
+        justify-content: center;
     
         /* top: 3.8rem; */
         right: 158px;
