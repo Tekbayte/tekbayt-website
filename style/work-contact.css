@@ -76,15 +76,15 @@ li{
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 0rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .navbar-mobile .nav-item a{
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    padding: 1.5rem 0;
     color: #000;
     text-transform: uppercase;
-    width: 100%
+    width: 100%;
 }
 
 .navbar-mobile .nav-item a:hover{
@@ -102,12 +102,12 @@ li{
     background: #3180D1;
     margin: 0 0rem 2rem 2rem;
     border-radius: 0.4rem;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out alternate;
 }
 
 .navbar-mobile .contact-us:hover{
     background: #f66733;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out alternate;
 }
 
 /* Desktop Navbar */
@@ -119,10 +119,15 @@ li{
 }
 
 .navbar-desktop .nav-item a{
-    padding: 0 1rem;
+    padding: 0 2.2rem;
     text-transform: uppercase;
     color: #000;
     font-size: 1.3rem;
+   
+}
+
+button{
+    cursor: pointer !important;
 }
 
 .navbar-desktop .nav-item a:hover{
@@ -254,11 +259,13 @@ li{
 
 #contact-us .contact-us-content{
     text-align: center;
+    /* padding: 0 2rem; */
 }
 
 .contact-us-content h2{
     font-size: 3rem;
     text-transform: uppercase;
+    padding: 0.7rem 0;
 }
 
 .contact-us-content .contact-us-business{
@@ -267,6 +274,8 @@ li{
 
 .contact-us-content p{
     font-size: 1.6rem;
+    line-height: 1.7;
+    padding: 0 2rem;
 }
 
 .contact-us-form{
@@ -371,7 +380,7 @@ li{
 /* Footer Section */
 #footer{
     background: #3180D1;
-    padding: 4rem 3rem;
+    padding: 4rem 2rem;
 }
 
 #footer .footer-container{
@@ -381,7 +390,7 @@ li{
 }
 
 #footer .footer-logo{
-    width: 18rem;
+    width: 15rem;
 }
 
 #footer .social-menu{
@@ -390,9 +399,9 @@ li{
 }
 
 #footer .social-menu a{
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #fff;
-    margin: 2rem 1.5rem;
+    margin: 2.3rem 1.2rem;
 }
 
 #footer .social-menu a:hover{
@@ -400,7 +409,7 @@ li{
 }
 
 #footer .social-menu a i{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 #footer .footer-services h2, #footer .footer-company h2{
@@ -474,6 +483,10 @@ li{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    #footer .footer-logo{
+        width: 18rem;
+    }
 }
 
 
@@ -514,6 +527,7 @@ li{
 
     #contact-us .contact-us-content p{
         font-size: 1.7rem;
+        padding: 0;
     }
 }
 /* Large devices (laptops/desktops, 992px and up) */

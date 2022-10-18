@@ -10,6 +10,7 @@ html{
     overflow-x: hidden;
     scroll-behavior: smooth;
     }
+
 a{
     text-decoration: none;
 }
@@ -67,15 +68,15 @@ a{
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 0rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .navbar-mobile .nav-item a{
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    padding: 1.5rem 0;
     color: #000;
     text-transform: uppercase;
-    width: 100%
+    width: 100%;
 }
 
 .navbar-mobile .nav-item a:hover{
@@ -91,7 +92,7 @@ a{
     color: #ffffff;
     width: 90%;
     background: #3180D1;
-    margin: 0 0rem 2rem 2rem;
+    margin: 0 0 2rem 2rem;
     border-radius: 0.4rem;
     transition: background 0.3s ease-in-out alternate;
 }
@@ -110,7 +111,7 @@ a{
 }
 
 .navbar-desktop .nav-item a{
-    padding: 0 1rem;
+    padding: 0 2.2rem;
     text-transform: uppercase;
     color: #000;
     font-size: 1.3rem;
@@ -160,6 +161,10 @@ h3.speed {
  .divspeed{
  margin: 0 auto;
 } 
+
+.home-divspeed-p {
+    display: none;
+}
 
 h3.speed::before{
     content: url(/Assets/VectorIncrease.png);
@@ -237,7 +242,7 @@ h3.speed::before{
     font-style: normal;
     font-weight: 400;
     font-size: 1.6rem;
-    line-height: 1.6;
+    line-height: 1.7;
     text-align: center;
     padding: 0 3rem;
     width: 99%;
@@ -299,6 +304,10 @@ img.downloader2{
 }
 
 @media only screen and (min-width: 768px) {
+    .home-divspeed-p {
+        display: block;
+    }
+
     img.downloader2 {
         margin: 8rem auto 0;
         width: 99%;
@@ -347,7 +356,7 @@ img.downloader2{
         width: 100%;
     
         display: flex;
-    justify-content: center;
+        justify-content: center;
     
         top: 4.5rem;
         right: 105px;
@@ -649,16 +658,17 @@ button.more{
     border: none;
 }
 
-.flex1 ,.flex2, .flex3{
+.flex1 , .flex2, .flex3{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1.5rem 2.5rem 0;
-    margin: .5rem auto 2.2rem;
+    padding: 1.5rem 2rem 0;
+    margin: .5rem auto 2rem;
 }
 
 .portfolioImg{
-width: 100%;
+    width: 100vw;
+    padding: 0 3rem;
 }
 
 button:hover{
@@ -704,8 +714,14 @@ button.seeAll{
     flex-direction: column;
 }
 @media only screen and (min-width: 768px) {
-    .portfolio{ display: flex;
-     flex-direction: row;
+    .portfolio{ 
+        display: flex;
+        flex-direction: row;
+    }
+
+    .portfolioImg{
+        width: 100%;
+        padding: 0;
     }
  }
 @keyframes scale{
@@ -770,7 +786,7 @@ button.contact{
 /* Footer Section */
 #footer{
     background: #3180D1;
-    padding: 4rem 3rem;
+    padding: 4rem 2rem;
 }
 
 #footer .footer-container{
@@ -780,7 +796,7 @@ button.contact{
 }
 
 #footer .footer-logo{
-    width: 18rem;
+    width: 15rem;
 }
 
 #footer .social-menu{
@@ -789,9 +805,9 @@ button.contact{
 }
 
 #footer .social-menu a{
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #fff;
-    margin: 2rem 1.5rem;
+    margin: 2.3rem 1.2rem;
 }
 
 #footer .social-menu a:hover{
@@ -799,7 +815,7 @@ button.contact{
 }
 
 #footer .social-menu a i{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 #footer .footer-services h2, #footer .footer-company h2{
@@ -874,6 +890,10 @@ button.contact{
     #footer .footer-container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #footer .footer-logo{
+        width: 18rem;
     }
 }
 
