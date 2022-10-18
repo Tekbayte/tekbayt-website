@@ -193,7 +193,7 @@
   
   .seccontainer {
     display: flex;
-    background-color: rgb(243, 253, 250);
+    background-color: #E7F3FF;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -246,7 +246,7 @@
   
   .seccontainer {
     display: flex;
-    background-color: rgb(243, 253, 250);
+    background-color: #E7F3FF;
     justify-content: center;
     align-items: center;
     width: 100%;
