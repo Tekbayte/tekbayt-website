@@ -223,7 +223,7 @@ h3.speed::before{
         width: 100%;
         display: flex;
         justify-content: center;
-        top: 13.5rem;
+        top: 3.5rem;
         right: 8.5rem;
     }
        @keyframes moveup {
@@ -410,7 +410,7 @@ img.downloader2{
         justify-content: center;
     
         /* top: 3.8rem; */
-        right: 158px;
+        /* right: 158px; */
     }
    
 }
