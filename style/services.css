@@ -54,9 +54,9 @@
   #hamburger-menu{
     font-size: 3rem;
     cursor: pointer;
-    margin-right: 2rem;
+    /* margin-right: 0.5rem; */
     opacity: 0.6;
-  }
+}
   
   #hamburger-menu:hover{
     opacity: 1;
