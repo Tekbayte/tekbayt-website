@@ -436,17 +436,22 @@
       font-size: 16px;
     }
   
-    .text3 {
+   .text3 {
       font-size: 25px;
       margin-top: 1em;
     }
 
     .para3 {
       font-size: 16px;
+      width:105%;
+      justify-items: center;
+      
+      
     }
 
     .para3list {
       font-size: 16px;
+      
     }
   
     .text4 {
@@ -456,6 +461,8 @@
 
     .para4 {
       font-size: 16px;
+      width:105%;
+      justify-items: center;
     }
 
     .para4list {
@@ -469,6 +476,8 @@
 
     .para5 {
       font-size: 16px;
+      width:105%;
+      justify-items: center;
     }
 
     .para5list {
@@ -487,6 +496,8 @@
 
     .para6 {
       font-size: 16px;
+      width:100%;
+      justify-items: center;
     }
 
     .para6list {
