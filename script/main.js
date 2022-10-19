@@ -94,86 +94,86 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Sending contact form details through EmailJs
-    const contactUsForm = document.getElementById('contact-us');
-    const formElement = document.querySelector('form');
-    const inputs = document.querySelectorAll('input, select, textarea');
-    const popUp = document.getElementById('pop-up');
-    // const resetBtn = document.getElementsByClassName('reset-button');
+    if(pathname == '/contact-us.html'){
+        // Sending contact form details through EmailJs
+        const contactUsForm = document.getElementById('contact-us');
+        const formElement = document.querySelector('form');
+        const inputs = document.querySelectorAll('input, select, textarea');
+        const popUp = document.getElementById('pop-up');
+        // const resetBtn = document.getElementsByClassName('reset-button');
 
-    // Adding event listeners and collecting data
-    inputs.forEach(input => {
-        input.addEventListener('invalid', () => {
-            input.classList.add('invalid');
-        }, false)
-       })
+        // Adding event listeners and collecting data
+        inputs.forEach(input => {
+            input.addEventListener('invalid', () => {
+                input.classList.add('invalid');
+            }, false)
+        })
 
-    inputs.forEach(input => {
-        input.addEventListener('blur', () => {
-            if(input.checkValidity()){
-                input.classList.add('valid');
-            }
-        }, false)
-       })
+        inputs.forEach(input => {
+            input.addEventListener('blur', () => {
+                if(input.checkValidity()){
+                    input.classList.add('valid');
+                }
+            }, false)
+        })
 
-       // get current scroll height of window
-       window.addEventListener('scroll', () => {
-            popUp.style.top = `${scrollY + 250}px`;
-        });
+        // get current scroll height of window
+        window.addEventListener('scroll', () => {
+                popUp.style.top = `${scrollY + 250}px`;
+            });
 
 
-    contactUsForm.addEventListener('submit', (event) => {
-        event.preventDefault();
+        contactUsForm.addEventListener('submit', (event) => {
+            event.preventDefault();
 
-        // change popUp position
-        popUp.style.left = '50%';
+            // change popUp position
+            popUp.style.left = '50%';
 
-        // Sending contact details through EmailJs
-        emailjs.sendForm('gmail', 'contact_us_tekbayt', formElement)
-        .then(function(response) {
-            if(response.status == 200){ 
-                
-                const hidePopUp = setTimeout(() => {
+            // Sending contact details through EmailJs
+            emailjs.sendForm('gmail', 'contact_us_tekbayt', formElement)
+            .then(function(response) {
+                if(response.status == 200){ 
+                    
+                    const hidePopUp = setTimeout(() => {
+                        // Show pop up message
+                        popUp.style.opacity = 1;
+                        popUp.innerHTML = `
+                        <h3>Submitted Successfully!!</h3>
+                        <p>You will receive an email shortly ...</p>
+                        <p>Click RESET to reset the form</p>
+                        `;
+                    }, 0);
+                    
+
+                    // Hide pop up after 3 seconds
+                    setTimeout(() => {
+                        clearTimeout(hidePopUp);
+                        popUp.style.top = '-100rem';
+                        popUp.style.opacity = 0;
+                        popUp.style.transition = 'top 1s ease-in-out';
+                    }, 4000);
+                }
+            }, 
+            function(error) {
+                if(error){
                     // Show pop up message
-                    popUp.style.opacity = 1;
-                    popUp.innerHTML = `
-                    <h3>Submitted Successfully!!</h3>
-                    <p>You will receive an email shortly ...</p>
-                    <p>Click RESET to reset the form</p>
-                    `;
-                }, 0);
-                
-
-                // Hide pop up after 3 seconds
-                setTimeout(() => {
-                    clearTimeout(hidePopUp);
-                    popUp.style.top = '-100rem';
-                    popUp.style.opacity = 0;
-                    popUp.style.transition = 'top 1s ease-in-out';
-                }, 4000);
-            }
-        }, 
-        function(error) {
-            if(error){
-                // Show pop up message
-                const hidePopUp = setTimeout(() => {
-                    popUp.style.opacity = 1;
-                    popUp.innerHTML = `
-                    <h3>Error !!</h3>
-                    <p>Please try again later</p>
-                    `
-                }, 0);
-                
-                // Hide pop up after 3 seconds
-                setTimeout(() => {
-                    clearTimeout(hidePopUp);
-                    popUp.style.top = '-100rem';
-                    popUp.style.opacity = 0;
-                    popUp.style.transition = 'top 1s ease-in-out';
-                }, 4000);
-            }
-        });
-    })
-
-
+                    const hidePopUp = setTimeout(() => {
+                        popUp.style.opacity = 1;
+                        popUp.innerHTML = `
+                        <h3>Error !!</h3>
+                        <p>Please try again later</p>
+                        `
+                    }, 0);
+                    
+                    // Hide pop up after 3 seconds
+                    setTimeout(() => {
+                        clearTimeout(hidePopUp);
+                        popUp.style.top = '-100rem';
+                        popUp.style.opacity = 0;
+                        popUp.style.transition = 'top 1s ease-in-out';
+                    }, 4000);
+                }
+            });
+        })
+    }
 })

@@ -77,15 +77,15 @@
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 0rem 2rem;
+    padding: 1rem 2rem;
   }
   
   .navbar-mobile .nav-item a{
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    padding: 1.5rem 0;
     color: #000;
     text-transform: uppercase;
-    width: 100%
+    width: 100%;
   }
   
   .navbar-mobile .nav-item a:hover{
@@ -118,12 +118,13 @@
     align-items: center;
     margin: 0 2rem;
   }
-  
+
   .navbar-desktop .nav-item a{
-    padding: 0 1rem;
+    padding: 0 2.2rem;
     text-transform: uppercase;
     color: #000;
     font-size: 1.3rem;
+  
   }
   
   .navbar-desktop .nav-item a:hover{
@@ -193,7 +194,7 @@
   
   .seccontainer {
     display: flex;
-    background-color: rgb(243, 253, 250);
+    background-color: #E7F3FF;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -246,7 +247,7 @@
   
   .seccontainer {
     display: flex;
-    background-color: rgb(243, 253, 250);
+    background-color: #E7F3FF;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -329,7 +330,8 @@
   /* Footer Section */
 #footer{
   background: #3180D1;
-  padding: 4rem 3rem;
+  padding: 4rem 2rem;
+  width: 100%;
 }
 
 #footer .footer-container{
@@ -339,7 +341,7 @@
 }
 
 #footer .footer-logo{
-  width: 18rem;
+  width: 12rem;
 }
 
 #footer .social-menu{
@@ -348,9 +350,9 @@
 }
 
 #footer .social-menu a{
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #fff;
-  margin: 2rem 1.5rem;
+  margin: 2.3rem 1.2rem;
 }
 
 #footer .social-menu a:hover{
@@ -358,7 +360,7 @@
 }
 
 #footer .social-menu a i{
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 #footer .footer-services h2, #footer .footer-company h2{
@@ -397,7 +399,8 @@
 }
 
 /* End of Footer Section */
-  
+
+                            
   @media screen and (max-width: 768px) {
     body {
       width: 100%;
@@ -549,7 +552,7 @@
       margin-right: 5em;
     }
   }
-  
+
     /* Media Queries */
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
@@ -585,6 +588,10 @@
       padding: 0 3rem;
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #footer .footer-logo{
+      width: 18rem;
     }
   }
   
@@ -633,8 +640,8 @@
   #our-works h2{
     font-size: 3rem;
     font-weight: 600;
+    
   }
-  
   #our-works .work-container{
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -643,4 +650,3 @@
     padding: 4rem 0;
   }
 }
-  

@@ -23,6 +23,7 @@ li{
     list-style-type: none;
 }
 
+
 /* Navbar Section */
 #header{
     position: fixed;
@@ -76,15 +77,15 @@ li{
     display: flex;
     flex-direction: column;
     align-items: start;
-    padding: 0rem 2rem;
+    padding: 1rem 2rem;
 }
 
 .navbar-mobile .nav-item a{
-    font-size: 1.5rem;
-    padding: 0.5rem 0;
+    font-size: 1.3rem;
+    padding: 1.5rem 0;
     color: #000;
     text-transform: uppercase;
-    width: 100%
+    width: 100%;
 }
 
 .navbar-mobile .nav-item a:hover{
@@ -102,12 +103,12 @@ li{
     background: #3180D1;
     margin: 0 0rem 2rem 2rem;
     border-radius: 0.4rem;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out alternate;
 }
 
 .navbar-mobile .contact-us:hover{
     background: #f66733;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out alternate;
 }
 
 /* Desktop Navbar */
@@ -119,10 +120,15 @@ li{
 }
 
 .navbar-desktop .nav-item a{
-    padding: 0 1rem;
+    padding: 0 2.2rem;
     text-transform: uppercase;
     color: #000;
     font-size: 1.3rem;
+   
+}
+
+button{
+    cursor: pointer !important;
 }
 
 .navbar-desktop .nav-item a:hover{
@@ -148,6 +154,7 @@ li{
     height: 4.5rem;
     margin: 0 3rem;
 }
+
 /* swipper*/
 .swiper {
     width: 100%;
@@ -179,6 +186,11 @@ li{
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
+    margin-bottom: 5rem;
+  }
+
+  .swiper-slide .member-header, .swiper-slide .member-paragraph{
+    display: none;
   }
 /*main*/
 
@@ -220,7 +232,7 @@ span.team::before{
     justify-content: center;
     padding: 0 4rem 2rem;
     font-size: 1.4rem;
-content: 'We are a group of young minds connected by a strong affinity of problem solving for growth and development';
+    content: 'We are a group of young minds connected by a strong affinity of problem solving for growth and development';
     animation: text-animate 20s ease-in-out 0s infinite;
 }
 img{
@@ -423,7 +435,7 @@ font-size: 1.6rem;
 /* Footer Section */
 #footer{
     background: #3180D1;
-    padding: 4rem 3rem;
+    padding: 4rem 2rem;
 }
 
 #footer .footer-container{
@@ -433,7 +445,7 @@ font-size: 1.6rem;
 }
 
 #footer .footer-logo{
-    width: 18rem;
+    width: 12rem;
 }
 
 #footer .social-menu{
@@ -442,9 +454,9 @@ font-size: 1.6rem;
 }
 
 #footer .social-menu a{
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #fff;
-    margin: 2rem 1.5rem;
+    margin: 2.3rem 1.2rem;
 }
 
 #footer .social-menu a:hover{
@@ -452,7 +464,7 @@ font-size: 1.6rem;
 }
 
 #footer .social-menu a i{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 #footer .footer-services h2, #footer .footer-company h2{
@@ -527,6 +539,10 @@ font-size: 1.6rem;
     #footer .footer-container{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #footer .footer-logo{
+        width: 18rem;
     }
 }
 

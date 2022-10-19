@@ -9,10 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" integrity="sha384-xeJqLiuOvjUBq3iGOjvSQSIlwrpqjSHXpduPd6rQpuiM3f5/ijby8pCsnbu5S81n" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/services.css" />
+
+    <!-- AOS Library CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Services | Tekbayt</title>
-    <link rel="stylesheet" href="./style/services.css" />
   </head>
+
   <body>
   
      <!-- Header Goes Here -->
@@ -32,7 +36,7 @@
                       <a class="nav-link" href="./index.html">Home</a>
                       <a class="nav-link active" href="./services.html">Services</a>
                       <a class="nav-link" href="./our-work.html">Our Work</a>
-                      <a class="nav-link" href="#">About Us</a>
+                      <a class="nav-link" href="./about-us.html">About Us</a>
                       <div class="vertical-line"></div>
                       <a class="nav-link" href="./contact-us.html">Contact Us</a>
                   </ul>
@@ -47,114 +51,151 @@
 
       <!-- Navbar on Mobile Devics -->
       <nav class="navbar-mobile">
-          <ul class="nav-item">
-              <a href="./index.html">Home</a>
-              <a href="./services.html">Services</a>
-              <a href="./our-work.html">Our Work</a>
-              <a href="about-us.html">About Us</a>
-          </ul>
-          <a href="./contact-us.html" class="contact-us">Contact Us</a>
+        <ul class="nav-item">
+            <a href="./index.html">
+                <i class="bi bi-house-fill" style="padding: 0 0.5rem;"></i>
+                <span>Home</span>
+            </a>
+            <a href="./services.html" class="active">
+                <i class="bi bi-tools" style="padding: 0 0.5rem;"></i>
+                <span>Services</span>
+            </a>
+            <a href="./our-work.html">
+                <i class="bi bi-pc-display-horizontal" style="padding: 0 0.5rem;"></i>
+                <span>Our Work</span>
+            </a>
+            <a href="./about-us.html">
+                <i class="bi bi-people-fill" style="padding: 0 0.5rem;"></i>
+                <span>About Us</span>
+            </a>
+            <a href="./contact-us.html">
+                <i class="bi bi-person-rolodex" style="padding: 0 0.5rem;"></i>
+                <span>Contact Us</span>
+            </a>
+        </ul>
       </nav>
-  </header>
+    </header>
   <!-- End of Header Section -->
 
   <!-- Hero Section -->
     <section id="services">
-      <div class="sec1">
+      <div class="sec1" data-aos="fade-right">
         <h1 class="text1">We are a team of young, talented & goal driven individuals</h1>
         <p class="para1">
           We are set out to give you the best experience, <br> provides solution that
           gives your business speedy<br> growth
         </p>
       </div>
-        <img class="img1" src="image/ServicesHeroBg.png" />
+
+      <img class="img1" src="image/ServicesHeroBg.png" data-aos="fade-left" />
     </section>
 
-        <div class="sec2">
-          <h1 class="text2">What we offer</h1>
-          <p class="para2">We boast of amazing result for our clients that will help speed up
-            and accelerate the growth of your business, <br> with our well scrutinize and 
-            goal oreinted digital marketing experts.
-          </p>
-        </div>
+    <!-- What We Offer Section -->
+    <section class="sec2" data-aos="fade-up">
+      <h1 class="text2">What we offer</h1>
+
+      <p class="para2">We boast of amazing result for our clients that will help speed up
+        and accelerate the growth of your business, <br> with our well scrutinize and 
+        goal oriented digital marketing experts.
+      </p>
+
+      <a href="./contact-us.html">
         <button class="bttn">Start a Project</button>
+      </a>
+    </section>
+        
+    <!-- Design Services Section -->
+    <section class="seccontainer" id="design-team">
+      <div class="sec3img" data-aos="fade-right">
+        <img class="img3" src="image/DesignService.png">
+      </div>
 
-        <div class="seccontainer">
-          <div class="sec3img">
-          <img class="img3" src="image/DesignService.png">
-          </div>
-          <div class="textcon1">
-          <h1 class="text3">
-            Design Services
-          </h1>
-          <p class="para3">We take ownership and full responsibility of your business <br>
-            by giving it the best aesthetics and a superb experience 
-            that project <br> a high level of growth and development that would 
-            amaze you.
-          </p>
-          <ul class="para3list">
-            <li>Ui/Ux designs</li>
-            <li>Logo design</li>
-            <li>Interactive design</li>
-            <li>Graphic design</li>
-          </ul>
-          </div>
-        </div>
+      <div class="textcon1" data-aos="fade-left">
+        <h1 class="text3">
+          Design Services
+        </h1>
 
-        <div class="seccontainer4">
-        <div class="textcon4">
-        <h1 class="text4">Digital marketing</h1>
-        <p class="para4">We take ownership and full responsibility of your business <br>
+        <p class="para3">We take ownership and full responsibility of your business <br>
           by giving it the best aesthetics and a superb experience 
           that project <br> a high level of growth and development that would 
-          amaze you.</p>
-          <ul class="para4list">
-            <li>Social Media marketing</li>
-            <li>Email marketing</li>
-            <li>Search engine optimization</li>
-            <li>Content marketing</li>
-            <li>Sms marketing</li>
-          </ul>
-        </div>
-            <img class="imgcon4" src="image/DigitalMarketing.png">
+          amaze you.
+        </p>
+
+        <ul class="para3list">
+          <li>UI/UX designs</li>
+          <li>Logo design</li>
+          <li>Interactive design</li>
+          <li>Graphic design</li>
+        </ul>
       </div>
-          </div>
-        </div>
-        <div class="seccontainer">
-          <div class="sec5img">
-          <img class="img5" src="image/AppWebDevelopment.png">
-          </div>
-          <div class="textcon1">
-          <h1 class="text5">
-            Mobile App/ Web Development
-          </h1>
-          <p class="para5">Digital transition of product and services has helped solve more <br>
-            problems and has also improved the availability of products to the public <br> (target audience).
-            Our team (TEKBAYT) aims to help you build digital  <br>products that helps you solve everyday problems with the following services.
-          </p>
-          <ul class="para5list">
-            <li>Web designs / Web development</li>
-            <li>Web app development</li>
-            <li>Mobile app development</li>
-            <li>IOS app development</li>
-          </ul>
-          </div>
-        </div>
-        <div class="seccontainer6">
-          <div class="textcon6">
-          <h1 class="text6">Brand Management</h1>
-          <p class="para6">Brand management is one of the important aspect of business growth <br>
-            and development. Our team is equiped with highly creative individuals <br> who work tiredlessly 
-            to build a unique identity for your business <br> This would be made possible by delving into our amazing services.</p>
-            <ul class="para6list">
-              <li>Brand Extension</li>
-              <li>Brand Licensing </li>
-              <li>Product Extension</li>
-            </ul>
-          </div>
-              <img class="imgcon6" src="image/BrandManagement.png">
-        </div>
+    </section>
+
+    <!-- Digital Marketing Section -->
+    <section class="seccontainer4" id="digital-marketing">
+      <div class="textcon4" data-aos="fade-right">
+        <h1 class="text4">Digital marketing</h1>
+
+        <p class="para4">
+          We take ownership and full responsibility of your business <br> by giving it the best aesthetics and a superb experience that project <br> a high level of growth and development that would amaze you.
+        </p>
+
+        <ul class="para4list">
+          <li>Social Media marketing</li>
+          <li>Email marketing</li>
+          <li>Search engine optimization</li>
+          <li>Content marketing</li>
+          <li>Sms marketing</li>
+        </u>
       </div>
+
+      <img class="imgcon4" src="image/DigitalMarketing.png" data-aos="fade-left">
+    </section>
+
+    <!-- Mobile App & Web Development -->
+    <section class="seccontainer" id="developers">
+      <div class="sec5img" data-aos="fade-right">
+        <img class="img5" src="image/AppWebDevelopment.png">
+      </div>
+
+      <div class="textcon1" data-aos="fade-left">
+        <h1 class="text5">
+          Mobile App/ Web Development
+        </h1>
+
+        <p class="para5">Digital transition of product and services has helped solve more <br>
+          problems and has also improved the availability of products to the public <br> (target audience).
+          Our team (TEKBAYT) aims to help you build digital  <br>products that helps you solve everyday problems with the following services.
+        </p>
+
+        <ul class="para5list">
+          <li>Web designs / Web development</li>
+          <li>Web app development</li>
+          <li>Mobile app development</li>
+          <li>IOS app development</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Brand Management Section -->
+    <section class="seccontainer6" id="brand-managers">
+      <div class="textcon6" data-aos="fade-right">
+        <h1 class="text6">Brand Management</h1>
+
+        <p class="para6">Brand management is one of the important aspect of business growth <br>
+          and development. Our team is equiped with highly creative individuals <br> who work tiredlessly 
+          to build a unique identity for your business <br> This would be made possible by delving into our amazing services.</p>
+
+        <ul class="para6list">
+          <li>Brand Extension</li>
+          <li>Brand Licensing </li>
+          <li>Product Extension</li>
+        </ul>
+      </div>
+
+      <img class="imgcon6" src="image/BrandManagement.png" data-aos="fade-left">
+    </section>
+    <!-- End Of What We Offer -->
+
 
     <!-- Footer starts here -->
     <footer id="footer">
@@ -180,13 +221,13 @@
             <div class="footer-services">
                 <h2>Services</h2>
                 <div>
-                    <a href="#">Web Design</a>
-                    <a href="#">Mobile Development</a>
-                    <a href="#">UI/UX Design</a>
-                    <a href="#">Web Development</a>
-                    <a href="#">Graphics Design</a>
-                    <a href="#">Brand Management</a>
-                </div>
+                  <a href="./services.html#design-team">Web & Graphics Design</a>
+                  <a href="./services.html#developers">Mobile Development</a>
+                  <a href="./services.html#design-team">UI/UX Design</a>
+                  <a href="./services.html#developers">Web Development</a>
+                  <a href="./services.html#digital-marketing">Digital Marketing</a>
+                  <a href="./services.html#brand-managers">Brand Management</a>
+              </div>
             </div>
     
             <div class="footer-company">
@@ -205,15 +246,26 @@
 
 
     <!-- Scripts -->
+    <!-- Tidio Support Chat Box -->
     <script src="//code.tidio.co/lhe5zo68obxwm9dhsmhl7q22dcauwyin.js" async></script>
+
+    <!-- EmailJs -->
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
     <script type="text/javascript">
-      (function(){
-         emailjs.init("bigNATc1WU2t7npuu");
-      })();
-   </script>
+        (function(){
+           emailjs.init("bigNATc1WU2t7npuu");
+        })();
+    </script>
+
+     <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+     <!-- Custom Script -->
     <script src="./script/main.js"></script>
   </body>
 </html>
