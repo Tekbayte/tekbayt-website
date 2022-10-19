@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-    // declare variables
+    // declare section variables
     const hamburgerMenu = document.querySelector('#hamburger-menu');
     const hamburgerMenuIcon = document.querySelector('#menu-icon');
     const mobileNavbar = document.querySelector('.navbar-mobile');
@@ -10,10 +10,19 @@ window.addEventListener('DOMContentLoaded', () => {
     const about= document.getElementById('about');
     const date = document.querySelector('#date');
 
-    // adding current year to the footer
+    // declaring form  variables
+    const contactUsContainer = document.getElementById('contact-us-container');
+    const contactUsForm = document.getElementById('contact-us');
+    const formElement = document.querySelector('form');
+    const inputs = document.querySelectorAll('input, select, textarea');
+    const successMessage = document.getElementById('success-message');
+    const successMessageButton = document.querySelector('.success-message-button');
+    const resetButton = document.querySelector('.reset-button');
+
+    // getting and adding current year to the footer
     date.innerHTML = new Date().getFullYear();
 
-    // adding event listeners
+    // adding event listener to hamburger menu
     hamburgerMenu.addEventListener('click', () => {
         ['bi-list', 'bi-x-lg'].map(menu => {
             hamburgerMenuIcon.classList.toggle(menu);
@@ -35,6 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // get website current pathname
     const { pathname } = document.location;
 
+    // getting the current location on the website
     const contentPushDown = () => {
         switch(pathname){
             case '/contact-us.html': 
@@ -54,6 +64,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // getting the current location on the website
     const contentPushUp = () => {
         switch(pathname){
             case '/contact-us.html': 
@@ -73,7 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-
+    // function to push main section down when navbar is shown
     const navbarPushContentDown = (sectionOne) => {
         if(pathname == '/services.html'){
             sectionOne.style.margin = '30em 0 0 0';
@@ -84,6 +95,7 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // function to push main section up when navbar is hidden
     const navbarPushContentUp = (sectionOne) => {
         if(pathname == '/services.html'){
             sectionOne.style.margin = '12em 0 0 0';
@@ -94,21 +106,18 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    if(pathname == '/contact-us.html'){
-        // Sending contact form details through EmailJs
-        const contactUsForm = document.getElementById('contact-us');
-        const formElement = document.querySelector('form');
-        const inputs = document.querySelectorAll('input, select, textarea');
-        const popUp = document.getElementById('pop-up');
-        // const resetBtn = document.getElementsByClassName('reset-button');
 
-        // Adding event listeners and collecting data
+    // work on form submission if website location is contact us
+    if(pathname == '/contact-us.html'){
+
+        // checking for invalid error during form submission
         inputs.forEach(input => {
             input.addEventListener('invalid', () => {
                 input.classList.add('invalid');
             }, false)
         })
 
+        // checking for valid form data when not in focus
         inputs.forEach(input => {
             input.addEventListener('blur', () => {
                 if(input.checkValidity()){
@@ -117,62 +126,66 @@ window.addEventListener('DOMContentLoaded', () => {
             }, false)
         })
 
-        // get current scroll height of window
-        window.addEventListener('scroll', () => {
-                popUp.style.top = `${scrollY + 250}px`;
-            });
+        // reseting the data entered
+        resetButton.addEventListener('click', () =>{
+            inputs.forEach(input => {
+                input.classList.remove('invalid');
+                input.classList.remove('valid');
+            })
+        })
 
 
+        // adding submit event and submitting user data
         contactUsForm.addEventListener('submit', (event) => {
             event.preventDefault();
-
-            // change popUp position
-            popUp.style.left = '50%';
 
             // Sending contact details through EmailJs
             emailjs.sendForm('gmail', 'contact_us_tekbayt', formElement)
             .then(function(response) {
                 if(response.status == 200){ 
-                    
-                    const hidePopUp = setTimeout(() => {
-                        // Show pop up message
-                        popUp.style.opacity = 1;
-                        popUp.innerHTML = `
-                        <h3>Submitted Successfully!!</h3>
-                        <p>You will receive an email shortly ...</p>
-                        <p>Click RESET to reset the form</p>
-                        `;
-                    }, 0);
-                    
+                    // display success message here
+                    contactUsContainer.style.animation = 'fadeOut 1s ease-in-out normal';
 
-                    // Hide pop up after 3 seconds
-                    setTimeout(() => {
-                        clearTimeout(hidePopUp);
-                        popUp.style.top = '-100rem';
-                        popUp.style.opacity = 0;
-                        popUp.style.transition = 'top 1s ease-in-out';
-                    }, 4000);
+                    // Reseting the form after submission
+                    inputs.forEach(input => {
+                        input.value = '';
+                    });
+
+                    // adding fade out and fade in animation after form submission
+                    contactUsContainer.addEventListener('animationend', () => {
+                        contactUsContainer.style.display = 'none';
+                        successMessage.style.display = 'block';
+                        successMessage.style.marginTop = '15rem';
+                        successMessage.style.animation = 'fadeIn 1s ease-in-out normal';
+                        
+                        successMessage.addEventListener('animationend', () => {
+                            contactUsContainer.style.animation = 'none';
+                        })
+                    });
                 }
             }, 
             function(error) {
                 if(error){
-                    // Show pop up message
-                    const hidePopUp = setTimeout(() => {
-                        popUp.style.opacity = 1;
-                        popUp.innerHTML = `
-                        <h3>Error !!</h3>
-                        <p>Please try again later</p>
-                        `
-                    }, 0);
-                    
-                    // Hide pop up after 3 seconds
-                    setTimeout(() => {
-                        clearTimeout(hidePopUp);
-                        popUp.style.top = '-100rem';
-                        popUp.style.opacity = 0;
-                        popUp.style.transition = 'top 1s ease-in-out';
-                    }, 4000);
+                    // display error message here
+                    alert('Sorry, an error has occured. Please try again later');
                 }
+            });
+        })
+
+        // displaying contact form again and hiding success message
+        successMessageButton.addEventListener('click', () => {
+                successMessage.style.animation = 'fadeOut 1s ease-in-out normal';
+
+                successMessage.addEventListener('animationend', () => {
+                successMessage.style.display = 'none';
+                contactUsContainer.style.animation = 'fadeIn 1s ease-in-out normal';
+
+                window.location = '/contact-us.html';
+                contactUsContainer.style.display = 'block';
+
+                contactUsContainer.addEventListener('animationend', () => {
+                    successMessage.style.animation = 'none';
+                })
             });
         })
     }

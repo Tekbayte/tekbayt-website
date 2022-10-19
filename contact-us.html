@@ -92,7 +92,7 @@
                 >
             </div>
 
-            <div>
+            <div id="contact-us-container">
                 <form method="POST" class="contact-us-form" id="contact-us" enctype="multipart/form-data">
                     <div>
                         <label for="fullName">Full Name</label>
@@ -144,16 +144,23 @@
                     </div>
                     <div class="form-buttons">
                         <button type="submit" class="submit-button">Submit</button>
-                        <button type="reset" class="reset-button">RESET</button>
+                        <button type="reset" class="reset-button">Reset</button>
                     </div>
                 </form>
             </div>
+
+            <!-- Message to display after successfully submitting the form -->
+            <section id="success-message">
+                <div>
+                    <h2>Thank you for contacting us!</h2>
+                    <p>We will be in touch with you shortly!</p>
+                    <button class="success-message-button">
+                        Submit Another
+                    </button>
+                </div>
+            </section>
         </div>
     </section>
-
-    <!-- Display Pop Up After Successfully Submitting Contact Form -->
-    <div id="pop-up">
-    </div>
 
     <!-- Footer starts here -->
     <footer id="footer">

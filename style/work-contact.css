@@ -241,6 +241,11 @@ button{
 
 
 /* Contact Us Section */
+#contact-us-container{
+    display: block;
+    /* animation: fadeOut 1s ease-in-out alternate; */
+}
+
 #contact-us{
     margin: 10rem 2rem;
     transition: margin 1s ease-in-out;
@@ -317,26 +322,32 @@ button{
     padding: 1.5rem 0;
     font-size: 1.6rem;
     text-transform: uppercase;
-    background: #f66733;
     color: #ffffff;
     border: none;
     cursor: pointer;
     border-radius: 0.5rem;
-    transition: background 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+
+.submit-button{
+    background: #f66733;
 }
 
 .reset-button{
-    background: #ca1313 !important;
+    background: #ca1313;
     margin: 2rem 0;
 }
 
 .reset-button:hover{
-    background: #3a27ba !important;
+    background: #dd4545;
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
 }
 
 .contact-us-form .submit-button:hover{
-    background: #3180D1;
-    transition: background 0.4s ease-in-out;
+    background: #f3794c;
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
 }
 
 /* Checking form Validity */
@@ -348,34 +359,66 @@ button{
     border: 0.15rem solid #0bc64d;
 }
 
-#pop-up{
-    position: absolute;
-    opacity: 0;
-    top: -100rem;
-    left: 0;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 30rem;
-    height: 30rem;
-    background: #3a27ba;
-    border-radius: 1rem;
+/* Success Message Section */
+#success-message{
     text-align: center;
-    transition: top 1s ease-in-out;
+    display: none;
 }
 
-#pop-up h3{
-    font-size: 2.5rem;
-    color: #fff;
+#success-message h2{
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0.6rem 0;
 }
 
-#pop-up p{
-    padding: 1rem 0;
+#success-message p{
     font-size: 1.5rem;
-    color: #fff;
+    padding: 1.3rem 0;
 }
+
+.success-message-button{
+    background: #f66733;
+    padding: 1.2rem 2rem;
+    color: #fff;
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.success-message-button:hover{
+    background-color: #f3794c;
+    transform: scale(1.06);
+    transition: all 0.4s ease-in-out;
+}
+
+/* adding fade in and fade out animations */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        scale: 0;
+        margin-top: 0rem;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+        margin-top: 15rem;
+    }
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+        margin-top: 15rem;
+    }
+
+    to{
+        opacity: 0;
+        margin-top: 0;
+    }
+}
+
 
 /* Footer Section */
 #footer{
@@ -465,6 +508,7 @@ button{
         display: none;
     }
 
+    /* our works section */
     #our-works h2{
         font-size: 3rem;
         font-weight: 600;
@@ -529,9 +573,27 @@ button{
         font-size: 1.7rem;
         padding: 0;
     }
+
+    #success-message h2{
+        font-size: 3rem;
+    }
+
+    #success-message p{
+        font-size: 1.7rem;
+    }
+
+    .success-message-button{
+        background: #f66733;
+        padding: 1.5rem 3rem;
+        font-size: 1.4rem;
+    }
 }
+
+
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+
+    /* Our works section */
     #our-works h2{
         font-size: 3rem;
         font-weight: 600;
