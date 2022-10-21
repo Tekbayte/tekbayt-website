@@ -153,7 +153,7 @@
   /* End of Navbar */
 
   /* Hero Section */
-  body #services {
+ body #services {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -222,6 +222,7 @@
   
   .seccontainer4 {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -247,13 +248,15 @@
   
   .seccontainer {
     display: flex;
-    background-color: #E7F3FF;
+    background-color:#E7F3FF;
     justify-content: center;
     align-items: center;
     width: 100%;
     margin-top: 3em;
     padding-left: 2em;
     padding-right: 2em;
+    padding: 2em;
+    
   }
   .text5 {
     font-size: 3em;
@@ -270,11 +273,13 @@
     margin-top: 2em;
   }
   .sec5img {
-    margin-top: 2em;
+    margin-top: 3em;
+    margin-left: 3em;
   }
   
   .seccontainer6 {
     display: flex;
+    flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -288,6 +293,7 @@
   }
   .para6 {
     font-size: 2em;
+    margin-right: 2em;
     margin-top: 1em;
   }
   .para6list {
@@ -296,7 +302,7 @@
     margin-top: 2em;
   }
   .imgcon6 {
-    margin-left: 2em;
+    margin-right: 8em;
     margin-top: 2em;
     padding-left: 2em;
     padding-right: 2em;
@@ -308,6 +314,7 @@
   }
   .imgcon4 {
     margin-top: 2em;
+    margin-right: 8em;
   }
   
   .bttn {
@@ -400,16 +407,15 @@
 
 /* End of Footer Section */
 
-                            
-  @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
     body {
       width: 100%;
       display: block;
     }
   
     body #services {
-      display: flex;
-      flex-direction: column;
+      display: block;
+      
       width: 100%;
       justify-content: center;
       align-items: center;
@@ -420,7 +426,7 @@
 
     #services h1{
       font-size: 2.8em;
-      line-height: 1.6;
+      line-height: 2em;
     }
 
     #services p{
@@ -436,7 +442,7 @@
       font-size: 16px;
     }
   
-   .text3 {
+    .text3 {
       font-size: 25px;
       margin-top: 1em;
     }
@@ -518,9 +524,11 @@
     }
 
     .imgcon6 {
-      width: 100%;
+      width: 110%;
       position: relative;
-      right: 3em;
+      right: 1.8em;
+      margin-top: 0.2em;
+      
     }
 
     .img3 {
@@ -528,7 +536,10 @@
     }
 
     .img5 {
-      width: 100%;
+      width: 110%;
+      position: relative;
+      right: 3em;
+      
     }
 
     .imgcon4 {
@@ -555,6 +566,7 @@
       align-items: center;
       width: 100%;
       margin-bottom: 8rem;
+      
     }
   
     .bttn {
@@ -562,8 +574,16 @@
       margin-left: 5em;
       margin-right: 5em;
     }
-  }
 
+    /* Media Queries */
+  /* Extra small devices (phones, 600px and down) */
+  @media only screen and (max-width: 600px) {
+    /* hide desktop navbar */
+    #navbar .navbar-desktop{
+        display: none;
+    }
+  }                        
+ 
     /* Media Queries */
   /* Extra small devices (phones, 600px and down) */
   @media only screen and (max-width: 600px) {
