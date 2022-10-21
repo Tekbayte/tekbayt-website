@@ -53,7 +53,6 @@ li{
 #hamburger-menu{
     font-size: 3rem;
     cursor: pointer;
-    /* margin-right: 0.5rem; */
     opacity: 0.6;
 }
 
@@ -243,11 +242,10 @@ button{
 /* Contact Us Section */
 #contact-us-container{
     display: block;
-    /* animation: fadeOut 1s ease-in-out alternate; */
 }
 
 #contact-us{
-    margin: 10rem 2rem;
+    margin: 10rem 1rem;
     transition: margin 1s ease-in-out;
 }
 
@@ -258,13 +256,13 @@ button{
 
 #contact-us .contact-us-container{
     display: grid;
-    grid-template-columns: repeat(1fr);
+    grid-template-columns: 1fr;
     gap: 3rem;
 }
 
 #contact-us .contact-us-content{
     text-align: center;
-    /* padding: 0 2rem; */
+    margin: 0 auto;
 }
 
 .contact-us-content h2{
@@ -280,7 +278,6 @@ button{
 .contact-us-content p{
     font-size: 1.6rem;
     line-height: 1.7;
-    padding: 0 2rem;
 }
 
 .contact-us-form{
@@ -553,6 +550,10 @@ button{
     }
 
     /* COntact Us Section */
+    #contact-us{
+        margin: 10rem 2rem;
+    }
+
     #contact-us .contact-us-img{
         width: 40rem;
     }
